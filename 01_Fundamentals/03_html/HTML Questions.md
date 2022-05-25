@@ -78,9 +78,8 @@
         <p>__&lt;/div>____<--closing tag</p>
 
    - Voorbeeld 2:  
-     &lt;p>This is &lt;em>Emphasize&lt;/em> Text&lt;/p> <--&lt;em> is het nested element van &lt;p>
-
-   &lt;p>This is &lt;b>bold&lt;/b> text&lt;/p> <--&lt;b> is het nested element van &lt;p>
+        <p>__&lt;p>This is &lt;em>Emphasize&lt;/em> Text&lt;/p>____<--&lt;em> is het nested element van &lt;p></p>
+        <p>__&lt;p>This is &lt;b>bold&lt;/b> text&lt;/p>____<--&lt;b> is het nested element van &lt;p></p>
 
    - De &lt;p> is normaliter ook een nested element van een ander element zoals een div, section, article e.t.c.
 
