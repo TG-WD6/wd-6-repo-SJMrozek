@@ -3,9 +3,9 @@
 1. ## Wat is HTML?
 
    HTML is een programmeer taal bestaande uit elementen, die kunnen worden toegepast op stukken text om die een andere betekenis te geven, een document in logische secties te verdelen en inhoud toe te voegen aan een pagina zoals afbeeldingen of video's.
-test
+
 <br>
-test
+
 2. ## Hoe ziet de basis-structuur van HTML eruit?
 
    - Een declaratie van de versie van HTML van het bestand.
