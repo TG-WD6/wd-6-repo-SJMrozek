@@ -32,9 +32,8 @@
    - HTML5 is Makkelijker in gebruik.
      - Betere [syntax](https://www.w3.org/html/wg/wiki/Guide/Syntax-Semantics#:~:text=Syntax%20is%20the%20arrangement%20of,the%20attributes%20of%20those%20elements.) dan de andere versies van HTML)
 
-   [[top 10 nieuwe features van HTML5]](https://www.geeksforgeeks.org/top-10-new-features-of-html5/#:~:text=Audio%20and%20Video%20tags%20are,%2C%20transformations%2C%20and%20even%20animations.)
-
-   [[HTML vs HTML5 en what's new]](https://medium.com/beginners-guide-to-mobile-web-development/whats-new-in-html-5-4ce9d62bf114)
+   [top 10 nieuwe features van HTML5](https://www.geeksforgeeks.org/top-10-new-features-of-html5/#:~:text=Audio%20and%20Video%20tags%20are,%2C%20transformations%2C%20and%20even%20animations.)
+   [HTML vs HTML5 en what's new](https://medium.com/beginners-guide-to-mobile-web-development/whats-new-in-html-5-4ce9d62bf114)
 
 <br>
 
