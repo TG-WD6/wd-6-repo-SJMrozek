@@ -44,8 +44,9 @@
 5. ## Wat zijn HTML attributen?
 
    HTML Attributen zijn onderdelen van HTML code die informatie bevatten over de elementen die erin staan. De attribuut staat altijd in de start- en eindtag en is specifiek voor de functie die je wilt dat je code vervult.
-
+<hr>
    - Voorbeeld:
+
    Het href attribuut specificeert de URL waarnaar je verwezen wilt worden en heeft de &lt;a> tag (Anchor tag). deze definieert een hyperlink.
    - het href attribuut in een lijn code:
 
