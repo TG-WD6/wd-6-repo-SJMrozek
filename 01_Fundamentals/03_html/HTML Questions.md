@@ -48,9 +48,10 @@
    - Voorbeeld:
 
    Het href attribuut specificeert de URL waarnaar je verwezen wilt worden en heeft de &lt;a> tag (Anchor tag). deze definieert een hyperlink.
+
    - het href attribuut in een lijn code:
 
-        &lt;a href:"https://github.com/" style="_blank">Go to GitHub&lt;/a>
+     &lt;a href:"https://github.com/" style="\_blank">Go to GitHub&lt;/a>
 
 <hr>
 
@@ -69,8 +70,8 @@
 
    Meta tags worden gebruikt om metadata van een HTML bestand aan te geven (informatie geven over de data in het HTML bestand). - Metadata = data(informatie) over data.
 
-- de &lt;meta> tags gaan altijd in het &lt;head> element.
-- meta tags specificeren meestal: character set, pagina beschrijving, sleutelwoorden(keywords), auteur van het document, viewport instellingen.
+   - de &lt;meta> tags gaan altijd in het &lt;head> element.
+   - meta tags specificeren meestal: character set, pagina beschrijving, sleutelwoorden(keywords), auteur van het document, viewport instellingen.
 
 <hr>
 
