@@ -1,23 +1,26 @@
 # HTML Questions
 
-1. ## Wat is HTML?
+1. # Wat is HTML?
+
    HTML is een programmeer taal bestaande uit elementen, die kunnen worden toegepast op stukken text om die een andere betekenis te geven, een document in logische secties te verdelen en inhoud toe te voegen aan een pagina zoals afbeeldingen of video's.
 
 <br>
 
-2. Hoe ziet de basis-structuur van HTML eruit?
+2. # Hoe ziet de basis-structuur van HTML eruit?
+
    - Een declaratie van de versie van HTML van het bestand.
    - Header
    - Body
 
 <br>
 
-3. Wat is een anchor tag?
+3. # Wat is een anchor tag?
+
    Een anchor tag is een aanklikbare text die een hyperlink bevat die verwijst naar een andere pagina, website, of deel van de pagina. Deze is standaard blauw en is onderstreept.
 
 <br>
 
-4. Noem een aantal nieuwe functionaliteiten van HTML5
+4. # Noem een aantal nieuwe functionaliteiten van HTML5
 
    - Audio en Video tags
    - Vector graphics
@@ -38,7 +41,8 @@
 
 <br>
 
-5. Wat zijn HTML attributen?
+5. # Wat zijn HTML attributen?
+
    HTML Attributen zijn onderdelen van HTML code die informatie bevatten over de elementen die erin staan. De attribuut staat altijd in de start- en eindtag en is specifiek voor de functie die je wilt dat je code vervult.
    - Voorbeeld: Het href attribuut specificeert de URL waarnaar je verwezen wilt worden en heeft de &lt;a> tag (Anchor tag). deze definieert een hyperlink.
    - het href attribuut in een lijn code:
@@ -46,7 +50,8 @@
 
 <br>
 
-6. Wat is HTML semantics?
+6. # Wat is HTML semantics?
+
    Semantic Elements zijn beschrijvende elementen. deze elementen voegen (bijna) niks nieuws toe, behalve een duidelijke naam. Dat maakt dat ze een stukje accessibility met zich meebrengen en de code makkelijker te begrijpen maken voor andere programmeurs en computers.
 
    - Semantic elements worden gebruikt om de verschillende onderdelen van een webpagina aan te duiden.
@@ -56,7 +61,8 @@
 
 <br>
 
-7. Waarvoor worden meta tags gebruikt?
+7. # Waarvoor worden meta tags gebruikt?
+
    Meta tags worden gebruikt om metadata van een HTML bestand aan te geven (informatie geven over de data in het HTML bestand). - Metadata = data(informatie) over data.
 
 - de &lt;meta> tags gaan altijd in het &lt;head> element.
@@ -64,7 +70,8 @@
 
 <br>
 
-8. Wat is een nested element?
+8. # Wat is een nested element?
+
    Een nested element is een tag die in een ander tag zitten. Een nested element is het child element van een ander element.
    Een nested element kan ook parent element zijn van een ander child element. (zie voorbeeld 1)
 
@@ -85,7 +92,7 @@
 
 <br>
 
-9. Wat is het verschil tussen inline- en blok-elementen?
+9. # Wat is het verschil tussen inline- en blok-elementen?
 
 - **Een Block(-level) Element** begint altijd op een nieuwe lijn en de browser voegt automatisch ruimte (margin) toe voor en na het element.
 
@@ -102,7 +109,8 @@
 
 <br>
 
-10. Wat is accessibility?
+10. # Wat is accessibility?
+
     Accessibility betekent toegankelijkheid.
     In HTML betekent accessibility dat je je code zo toegangkelijk mogelijk maakt voor zowel mensen en computers. Dat houdt in dat je in je code rekening houdt met dat het makkelijk is voor de consumenten(met beperkingen), andere programmeurs en computer om de website te gebruiken. Dit bereik je door zoveel mogelijk de juiste HTML elementen te gebruiken voor de functie die ze hebben. Ook berijk je dit door de [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) accessibility standaard te gebruiken in je code.
 
