@@ -83,10 +83,10 @@
    - Voorbeeld 1:
 
    <p>&lt;div>     <--parent van de ul</p>
-     <p>&lt;ul>      <--nested element in de div (child van div)</p>
-       <p>&lt;li>      <--nested element in de ul (child van ul)</p>
-       <p>&lt;/li>         <--closing tag</p>
-     <p>&lt;/ul>         <--closing tag</p>
+    | <p>&lt;ul>      <--nested element in de div (child van div)</p>
+    |  <p>&lt;li>      <--nested element in de ul (child van ul)</p>
+    |  <p>&lt;/li>         <--closing tag</p>
+    | <p>&lt;/ul>         <--closing tag</p>
    <p>&lt;/div>        <--closing tag</p>
 
    - Voorbeeld 2:  
