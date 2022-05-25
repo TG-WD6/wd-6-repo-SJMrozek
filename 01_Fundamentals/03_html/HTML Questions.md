@@ -70,12 +70,12 @@
 
    - Voorbeeld 1:
 
-    <p>__&lt;div>____<--parent van de ul</p>
-    <p>______&lt;ul>____<--nested element in de div (child van div)</p>
-    <p>__________&lt;li>____<--nested element in de ul (child van ul)</p>
-    <p>__________&lt;/li>____<--closing tag</p>
-    <p>______&lt;/ul>____<--closing tag</p>
-    <p>__&lt;/div>____<--closing tag</p>
+        <p>__&lt;div>____<--parent van de ul</p>
+        <p>______&lt;ul>____<--nested element in de div (child van div)</p>
+        <p>__________&lt;li>____<--nested element in de ul (child van ul)</p>
+        <p>__________&lt;/li>____<--closing tag</p>
+        <p>______&lt;/ul>____<--closing tag</p>
+        <p>__&lt;/div>____<--closing tag</p>
 
    - Voorbeeld 2:  
      &lt;p>This is &lt;em>Emphasize&lt;/em> Text&lt;/p> <--&lt;em> is het nested element van &lt;p>
