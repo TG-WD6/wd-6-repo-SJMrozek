@@ -1,6 +1,6 @@
 # HTML Questions
 
-1. Wat is HTML?
+1. ## Wat is HTML?
    HTML is een programmeer taal bestaande uit elementen, die kunnen worden toegepast op stukken text om die een andere betekenis te geven, een document in logische secties te verdelen en inhoud toe te voegen aan een pagina zoals afbeeldingen of video's.
 
 <br>
