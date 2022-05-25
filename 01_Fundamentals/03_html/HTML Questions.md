@@ -87,16 +87,15 @@
 
 9. Wat is het verschil tussen inline- en blok-elementen?
 
-- Een Block(-level) Element begint altijd op een nieuwe lijn en de browser voegt automatisch ruimte (margin) toe voor en na het element.
+- **Een Block(-level) Element** begint altijd op een nieuwe lijn en de browser voegt automatisch ruimte (margin) toe voor en na het element.
 
-* voorbeelden:
+    voorbeelden:
   - &lt;p> definieert een paragraaf.
   - &lt;div> definieert een scheiding of sectie.
 
-- Inline Element begint NIET op een nieuwe lijn en gebruikt alleen de breedte die nodig is
+- **Inline Element** begint NIET op een nieuwe lijn en gebruikt alleen de breedte die nodig is
 
-* voorbeeld:
-
+    voorbeeld:
   - &lt;span> is een onderdeel element van een paragraaf.
 
     [meer info + lijst van block- en inline elementen](https://www.w3schools.com/html/html_blocks.asp)
