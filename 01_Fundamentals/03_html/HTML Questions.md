@@ -30,7 +30,7 @@
    - Opslag
      - HTML gebruikt Application cache, web SQL, web storage i.p.v. alleen de browser
    - HTML5 is Makkelijker in gebruik.
-     - Betere <a href="https://www.w3.org/html/wg/wiki/Guide/Syntax-Semantics#:~:text=Syntax%20is%20the%20arrangement%20of,the%20attributes%20of%20those%20elements." target="_blank" style="color=lightsyntax</a> dan de andere versies van HTML)
+     - Betere [syntax](https://www.w3.org/html/wg/wiki/Guide/Syntax-Semantics#:~:text=Syntax%20is%20the%20arrangement%20of,the%20attributes%20of%20those%20elements.) dan de andere versies van HTML)
 
    [[top 10 nieuwe features van HTML5]](https://www.geeksforgeeks.org/top-10-new-features-of-html5/#:~:text=Audio%20and%20Video%20tags%20are,%2C%20transformations%2C%20and%20even%20animations.)
 
@@ -77,7 +77,7 @@
 
    - Voorbeeld 2:  
     &lt;p>This is &lt;em>Emphasize&lt;/em> Text&lt;/p>      <--&lt;em> is het nested element van &lt;p>
-    
+
    &lt;p>This is &lt;b>bold&lt;/b> text&lt;/p>      <--&lt;b> is het nested element van &lt;p>
    - De &lt;p> is normaliter ook een nested element van een ander element zoals een div, section, article e.t.c.
 
