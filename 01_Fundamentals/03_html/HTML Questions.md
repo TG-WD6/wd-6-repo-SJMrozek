@@ -4,7 +4,7 @@
 
    HTML is een programmeer taal bestaande uit elementen, die kunnen worden toegepast op stukken text om die een andere betekenis te geven, een document in logische secties te verdelen en inhoud toe te voegen aan een pagina zoals afbeeldingen of video's.
 
-<br>
+<hr>
 
 2. ## Hoe ziet de basis-structuur van HTML eruit?
 
@@ -12,13 +12,13 @@
    - Header
    - Body
 
-<br>
+<hr>
 
 3. ## Wat is een anchor tag?
 
    Een anchor tag is een aanklikbare text die een hyperlink bevat die verwijst naar een andere pagina, website, of deel van de pagina. Deze is standaard blauw en is onderstreept.
 
-<br>
+<hr>
 
 4. ## Noem een aantal nieuwe functionaliteiten van HTML5
 
@@ -39,12 +39,12 @@
 
    [HTML vs HTML5 en what's new](https://medium.com/beginners-guide-to-mobile-web-development/whats-new-in-html-5-4ce9d62bf114)
 
-<br>
+<hr>
 
 5. ## Wat zijn HTML attributen?
 
    HTML Attributen zijn onderdelen van HTML code die informatie bevatten over de elementen die erin staan. De attribuut staat altijd in de start- en eindtag en is specifiek voor de functie die je wilt dat je code vervult.
-<hr>
+
    - Voorbeeld:
 
    Het href attribuut specificeert de URL waarnaar je verwezen wilt worden en heeft de &lt;a> tag (Anchor tag). deze definieert een hyperlink.
@@ -52,7 +52,7 @@
 
         &lt;a href:"https://github.com/" style="_blank">Go to GitHub&lt;/a>
 
-<br>
+<hr>
 
 6. ## Wat is HTML semantics?
 
@@ -63,7 +63,7 @@
    - De functionaliteit van Semantic elements is vooral de naamgeving. Je bent dus niet verplicht deze te gebruiken, maar het is wel een "good practise" om het wel te doen vanwege de volgende punten:
    - Semantic elements hebben geen speciale standaard-CSS die ze in gebruik anders maken dan een div.
 
-<br>
+<hr>
 
 7. ## Waarvoor worden meta tags gebruikt?
 
@@ -72,7 +72,7 @@
 - de &lt;meta> tags gaan altijd in het &lt;head> element.
 - meta tags specificeren meestal: character set, pagina beschrijving, sleutelwoorden(keywords), auteur van het document, viewport instellingen.
 
-<br>
+<hr>
 
 8. ## Wat is een nested element?
 
@@ -94,7 +94,7 @@
 
    - De &lt;p> is normaliter ook een nested element van een ander element zoals een div, section, article e.t.c.
 
-<br>
+<hr>
 
 9. ## Wat is het verschil tussen inline- en blok-elementen?
 
@@ -113,7 +113,7 @@
 
     [meer info + lijst van block- en inline elementen](https://www.w3schools.com/html/html_blocks.asp)
 
-<br>
+<hr>
 
 10. ## Wat is accessibility?
 
