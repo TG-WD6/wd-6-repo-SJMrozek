@@ -47,6 +47,7 @@
 
    - Voorbeeld: Het href attribuut specificeert de URL waarnaar je verwezen wilt worden en heeft de &lt;a> tag (Anchor tag). deze definieert een hyperlink.
    - het href attribuut in een lijn code:
+   
      &lt;a href:"https://github.com/ style="\_blank">Go to GitHub&lt;/a>
 
 <br>
