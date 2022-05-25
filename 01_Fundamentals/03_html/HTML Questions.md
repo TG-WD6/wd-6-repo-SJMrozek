@@ -89,7 +89,7 @@
 
 - **Een Block(-level) Element** begint altijd op een nieuwe lijn en de browser voegt automatisch ruimte (margin) toe voor en na het element.
 
-    voorbeelden:
+    voorbeeld:
   - &lt;p> definieert een paragraaf.
   - &lt;div> definieert een scheiding of sectie.
 
