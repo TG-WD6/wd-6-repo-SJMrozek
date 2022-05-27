@@ -18,10 +18,22 @@ HTML is een programmeer taal bestaande uit elementen, die kunnen worden toegepas
 
 ## 2. Hoe ziet de basis-structuur van HTML eruit?
 
-- Een declaratie van de versie van HTML van het bestand.
-- Header
-- Body
+- !doctype html
+- html + taal van het bestand
+- head met metadata en titel.
+- body
+- closing tags van body, head en html in de beschrevem volgorde.
 
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+      </head>
+      </body>
+      </html>
 <br><hr>
 
 
