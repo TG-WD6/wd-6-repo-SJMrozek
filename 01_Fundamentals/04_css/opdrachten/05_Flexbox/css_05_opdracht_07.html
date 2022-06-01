@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox opdracht 7</title>
+    <link rel="icon" href="../images/css_icon.png">
+    <style>
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        
+        .stat_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            padding: 5px 0;
+            background: rgb(255, 250, 202);
+        }
+
+        .stat {
+            margin: 5px;
+            background: rgb(174, 169, 255);
+            min-width: 1vw;
+            width: 5vw;
+        }
+
+        #stat1 {
+            height: 100%;
+        }
+        
+        #stat2 {
+            height: 40%;
+        }
+
+        #stat3 {
+            height: 50%;
+        }
+
+        #stat4 {
+            height: 60%;
+        }
+
+        #stat5 {
+            height: 20%;
+        }
+
+        #stat6 {
+            height: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="stat_container">
+        <div class="stat" id="stat1"></div>
+        <div class="stat" id="stat2"></div>
+        <div class="stat" id="stat3"></div>
+        <div class="stat" id="stat4"></div>
+        <div class="stat" id="stat5"></div>
+        <div class="stat" id="stat6"></div>
+    </div>
+
+</body>
+</html>

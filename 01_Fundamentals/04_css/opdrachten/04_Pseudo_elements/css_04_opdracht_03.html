@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Elements opdracht 3</title>
+    <link rel="icon" href="../images/css_icon.png">
+    <style>
+        * {
+            margin: 0;
+        }
+        p {
+            padding: 20px;
+        }
+        .text_box {
+            position: relative;
+            margin: 20px 10vw;
+            max-height: 850px;
+            border: 5px solid gray;
+        }
+
+        .text_box::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(../images/rat.png) center no-repeat; 
+            background-size: 100em;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="text_box">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue erat, lacinia non facilisis id, ultrices eu dui. Sed vitae augue dignissim, venenatis odio non, venenatis elit. Donec elit velit, eleifend sit amet justo quis, auctor dignissim justo. Integer vitae quam ut diam dapibus sagittis ac et nibh. Morbi semper volutpat mi, posuere malesuada orci. Mauris maximus nunc eu lorem vestibulum, sodales eleifend ex ullamcorper. Phasellus consectetur gravida risus, et auctor magna mattis in. Quisque blandit condimentum tellus, vel gravida diam consequat eu. Aliquam commodo lectus lectus, blandit rutrum sapien efficitur euismod. Integer euismod dui non libero fermentum, eleifend iaculis purus dapibus. Integer molestie consectetur molestie. Donec feugiat vitae tellus quis vehicula. Donec consequat lacinia sapien vitae ullamcorper. Sed interdum erat nisi, ut bibendum orci facilisis ullamcorper.Nulla eget magna eu metus gravida ornare ac rhoncus diam. Pellentesque placerat, metus sed semper placerat, sem odio interdum erat, eu laoreet est nunc vel est. Maecenas vehicula eros lacus, eget aliquet odio tincidunt sed. Donec leo turpis, rhoncus et tellus a, pharetra porta quam. Vestibulum sagittis, eros nec sollicitudin feugiat, urna enim tempor augue, in luctus purus massa sit amet nunc. Quisque vel facilisis orci. Ut interdum imperdiet tristique. Quisque molestie tincidunt scelerisque. Aliquam velit leo, hendrerit at magna vel, eleifend commodo felis. Sed ultrices convallis nulla eget euismod. Aenean enim ligula.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

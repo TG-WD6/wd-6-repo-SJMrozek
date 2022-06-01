@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Elements opdracht 4</title>
+    <link rel="icon" href="../images/css_icon.png">
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+
+        .circle {
+            position: relative;
+            height: 120px;
+            width: 120px;
+            background-color: black;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .circle p {
+            display: flex;
+            height:120px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 35px;
+        }
+
+        .circle::before {
+            content: ".";
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            left: -25px;
+            top: 30px;
+            align-self: center;
+            background-color: black;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            transform: rotate(180deg);
+        }
+
+        .circle::after {
+            content: "." ;
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            right: -25px;
+            top: 30px;
+            background-color: black;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+        }
+
+
+
+        .tags {
+            display: flex;
+            margin: auto;
+            margin-top: 20px;
+            justify-content: space-around;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="tags">
+        <div class="circle">
+            <p>1</p>
+        </div>
+
+
+        <div class="circle">
+            <p>2</p>
+        </div>
+
+
+
+        <div class="circle">
+            <p>3</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
