@@ -2,7 +2,7 @@
 
 <br>
 
-# Display & Positioning
+# CSS Display & Positioning
 
 ## 1. De belangrijkste waardes van “position” zijn static, relative, absolute, fixed & sticky. Leg voor elke uit wat ze doen.
 <br>

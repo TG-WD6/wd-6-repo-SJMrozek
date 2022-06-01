@@ -2,7 +2,7 @@
 
 <br>
 
-# Pseudo Elements
+# CSS Pseudo Elements
 
 ## 1. Er zijn 14 verschillende pseudo-elementen. Beschrijf ze alle 14 kort en maak voor elk een voorbeeld.
 <br>

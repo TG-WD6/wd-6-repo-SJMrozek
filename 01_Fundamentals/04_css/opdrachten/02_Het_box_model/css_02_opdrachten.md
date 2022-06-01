@@ -2,7 +2,7 @@
 
 <br>
 
-# CSS Selectors & Visual rules
+# CSS Het Box Model
 
 ## 1.Wat zijn de eigenschappen van block boxes en inline boxes?
 <br>

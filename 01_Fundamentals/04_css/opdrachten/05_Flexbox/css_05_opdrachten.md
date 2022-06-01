@@ -2,7 +2,7 @@
 
 <br>
 
-# Flexbox
+# CSS Flexbox
 
 Alle Flexbox opdrachten zijn praktijk opdrachten.
 <br>
