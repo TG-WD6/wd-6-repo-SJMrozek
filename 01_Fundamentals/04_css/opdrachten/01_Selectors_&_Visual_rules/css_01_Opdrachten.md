@@ -167,8 +167,16 @@ Zo is het CSS overzichtelijk en makkelijk te lezen.
 
 <br><hr>
 
+## 4. [css_01_opdracht_04.html](css_01_opdracht_04.html)
+<br>
 
-De opdrachten 4 t/m 7 zijn .html bestanden
+## 5. [css_01_opdracht_05.html](css_01_opdracht_05.html)
+<br>
+
+## 6. [css_01_opdracht_06.html](css_01_opdracht_06.html)
+<br>
+
+## 7. [css_01_opdracht_07.html](css_01_opdracht_07.html)
 
 <br><hr>
 

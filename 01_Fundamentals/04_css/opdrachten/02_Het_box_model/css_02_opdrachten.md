@@ -69,7 +69,7 @@ In dit geval gebruik je de <span style="color:orange">margin property</span>. zi
 
 <br><hr>
 
-## 7. Maak nu een blok met width: 100px, height: 100px, margin: 5px, padding 5px en border-width: 5px. ([css_02_opdracht_07.html](css_02_opdracht_07.html))
+## 7. Maak nu een blok met width: 100px, height: 100px, margin: 5px, padding 5px en border-width: 5px. [css_02_opdracht_07.html](css_02_opdracht_07.html)
 <br>
 
 - ### Hoe breed is de box?
