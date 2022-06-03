@@ -14,8 +14,8 @@ section {
     background-color: lightblue;
     padding: 25px;
     display: grid;
-    grid-template-columns: [col-start] 300px 1fr [col-end];
-    grid-auto-rows: [row-start] 1fr 1fr [row-end];
+    grid-template-columns: [col-start] 300px [col-mid] 1fr [col-end];
+    grid-auto-rows: [row-start] 1fr [col-mid] 1fr [row-end];
     gap: 10px;
 }
 

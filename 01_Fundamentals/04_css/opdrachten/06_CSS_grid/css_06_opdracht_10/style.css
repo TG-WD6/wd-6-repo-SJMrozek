@@ -13,6 +13,14 @@ section {
     min-width: 100vw;
     background-color: lightblue;
     padding: 25px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-auto-rows: repeat(autofill, 1fr);
+    grid-template-areas: 
+    "sidebar"
+    "sidebar"
+    "sidebar";
+    gap: 10px;
 }
 
 section div {
@@ -26,8 +34,11 @@ section div {
     background-color: lightgreen;
     width: 100%;
     height: 100%;
+    grid-area: sidebar;
+
 }
 
 .article {
     background-color: white;
 }
+
