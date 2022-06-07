@@ -1,0 +1,65 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-size: 28px;
+}
+
+.container {
+    display: flex;
+    margin: 10px;
+    width: 450px;
+    height: 350px;
+    border: 2px solid black;
+}
+
+.seek {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+}
+
+.seek img {
+    width: auto;
+    height: 80%;
+    z-index: -2;
+}
+
+.seek p {
+    z-index: 0;
+}
+
+
+.seek::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+    transition: background-color 1s 1s;
+}
+
+.seek:hover::before {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+
+.seek::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 133, 38);
+    transition: transform 1s;
+}
+
+.seek:hover::after {
+    transform: translate(120px, 120px) rotate(30deg);
+}

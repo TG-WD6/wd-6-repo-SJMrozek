@@ -1,0 +1,59 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    margin: 10px;
+    width: 800px;
+    height: 400px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container > * {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 50px;
+    height:50px;
+    font-size: xx-large;
+}
+
+.container:hover .box1 {
+    left: 748px;
+    transform: translateY(-174px);
+}
+
+.container:hover .box2 {
+    left: 0px;
+    transform: translateY(-174px);
+}
+
+
+.container:hover .box3 {
+    left: 0px;
+    transform: translateY(174px);
+}
+
+
+.box1 {
+    left: 380px;
+    transition: left 1s .5s, transform 2s;
+}
+
+.box2 {
+    left: 380px;
+    transition: left 1s .5s, transform 2s;
+}
+
+.box3 {
+    left: 380px;
+    transition: left 1s 1s, transform 2s 2s;
+}

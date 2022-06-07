@@ -1,0 +1,64 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 5px;
+
+}
+
+.container {
+    width: 800px;
+    height: auto;
+    border: 1px solid black;
+}
+
+.container > * {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 50px;
+    height:50px;
+    background-color: white;
+}
+
+.container:hover > * {
+    transform: translateX(735px);
+    background-color: red;
+}
+
+.container:hover .box1 {
+    border-radius: 50%;
+}
+
+.container:hover .box2 {
+    border-radius: 25%;
+}
+
+.box1 {
+    transition: transform 3s, background-color 3s;
+}
+
+.box2 {
+    transition: transform 3s, background-color 3s, border 3s;
+    transition-timing-function: ease-in;
+}
+
+.box3 {
+    transition: transform 3s, background-color 3s;
+    transition-timing-function: ease-out;
+}
+
+.box4 {
+    transition: transform 3s, background-color 3s;
+    transition-timing-function: ease-in-out;
+}
+
+.box5 {
+    transition: transform 3s, background-color 3s;
+    transition-timing-function: cubic-bezier(.87,.76,.43,-0.71);
+    
+}
