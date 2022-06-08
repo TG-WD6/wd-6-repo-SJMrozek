@@ -1,0 +1,15 @@
+@import "./colors";
+
+.button {
+    display: flex;
+    border: 0;
+    width: 100px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    font-weight: 700;
+    &:hover {
+        background-color: violet;
+    }
+}

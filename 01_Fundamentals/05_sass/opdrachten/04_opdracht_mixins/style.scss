@@ -1,0 +1,28 @@
+@mixin button_style {
+    background-color: rgb(52, 94, 233);
+    color: rgb(12, 32, 121);
+    &:hover {
+        background-color: rgb(223, 67, 67);
+        color: orange;
+    }
+}
+
+@mixin div_transition {
+    background-color: rgb(52, 94, 233);
+    color: rgb(12, 32, 121);
+    transition: color 2s, background-color 2s;
+    &:hover {
+        background-color: rgb(223, 67, 67);
+        color: orange;
+    }
+}
+
+.button {
+    @include button_style()
+}
+
+.colorChangingSquare {
+    width: 100px;
+    height: 100px;
+    @include div_transition()
+}
