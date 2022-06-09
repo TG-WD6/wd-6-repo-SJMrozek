@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Elements opdracht 5</title>
+    <link rel="icon" href="../images/css_icon.png">
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        .star {
+            margin: 30px;
+        }
+
+        .star div {
+            position: absolute;
+            transform: rotate(50deg);
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+
+        .star div::before {
+            position: absolute;
+            content: "";
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            transform: rotate(30deg);
+        }
+
+        .star div::after {
+            position: absolute;
+            content: "";
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            transform: rotate(50deg);
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="star">
+        <div></div>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors & Visual rules opdracht 6</title>
+    <link rel="icon" href="../images/css_icon.png">
+    <style>
+        * {                                     
+            font-family: monospace;             /*universal selector*/
+
+        }
+        a[href="https://github.com"] {          /*attribute selector*/
+            background-color: yellow;
+        }
+
+        .items > h3 {                        /*child selectors*/
+            color: red;
+        }
+
+        li:first-of-type + li {                 /*adjacent sibling selectors*/
+            color: orange;
+        }
+
+        h3 ~ p {                                /*general sibling selector*/
+            color: blueviolet;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>          
+    <h2>Title</h2>
+    <div class="items">
+        <h3><u>List items</u></h3>
+        <ul>
+            <li>list item</li>
+            <li>list item2</li>
+            <li>list item3</li>
+        </ul>
+    </div>
+    <div>
+        <h3><u>Some paragraphs</u></h3>
+        <p>paragraph tekst</p>
+        <p>paragraph tekst2</p>
+        <p>paragraph tekst3</p>
+        <img src="" alt="">
+    </div>
+    <a href="https://github.com" target="_blank">Go to github</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Het box model opdracht 2</title>
+    <link rel="icon" href="../images/css_icon.png">
+    <style>
+        div {
+            background-color: lightgreen;
+        }
+        p {
+            background-color: seagreen;
+            border: 1px solid black;
+        }
+        span {
+            background-color: white;
+            border: 1px solid black;
+            /*Als ik hier width en height toepas, gebeurt er niks.*/
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Dit is een block en neemt de hele breedte in waardoor de volgende box op de volgende regel zit</p>
+        <p>In dit blok zit <span>inline tekst</span> in wat dus niet op de volgende regel komt te <span>staan</span></p>
+    </div>
+</body>
+</html>

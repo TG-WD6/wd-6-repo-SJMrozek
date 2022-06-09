@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox opdracht 4</title>
+    <link rel="icon" href="../images/css_icon.png">
+    <style>
+
+        * {
+            font-family: monospace;
+        }
+
+        .container {
+            display: flex;
+            background-color: khaki;
+            height: fit-content;
+            justify-content: space-between;
+        }
+
+
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            width: 100%;
+            height: fit-content;
+            background-color: lightblue;
+        }
+
+        .box h2 {
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+            background-color: whitesmoke;
+        }
+
+
+
+        .content {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+
+        .content > *{
+            display: flex;
+            margin: 5px;
+            width: 3vw;
+            height: 5vw;
+            background-color:pink;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        #box1 .content {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        #box2 .content {
+            display: flex;
+            justify-content: center;
+        }
+
+        #box3 .content {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #box4 .content {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #box5 .content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #box6 .content {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>justify-content</h1>
+    <div class="container">
+
+        <div class="box" id="box1">
+            <h2>flex-start</h2>
+            <div class="content">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="box" id="box2">
+            <h2>center</h2>
+            <div class="content">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="box" id="box3">
+            <h2>flex-end</h2>
+            <div class="content">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+
+        <div class="box" id="box4">
+            <h2>space-around</h2>
+            <div class="content">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="box" id="box5">
+            <h2>space-between</h2>
+            <div class="content">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="box" id="box6">
+            <h2>space-evenly</h2>
+            <div class="content">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

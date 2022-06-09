@@ -1,0 +1,15 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    width: fit-content;
+    display: flex;
+    font-size: 10vw;
+    transition: color 250ms;
+}
+
+h1:hover {
+    color: red;
+}

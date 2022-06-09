@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors & Visual rules opdracht 7</title>
+    <link rel="icon" href="../images/css_icon.png">
+    <style>
+        div.opdracht {                          /*Een selector die alle elementen met type div EN class “opdracht” selecteert*/
+            color: lightgray;
+            background-color: gray;
+        }
+
+        h2, a, #unique_text {                   /*Meerdere selectors die hetzelfde stukje CSS gebruiken*/
+            background-color: crimson;
+            color: white;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            word-spacing: vw;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="opdracht">
+        <h2>div en class opdracht</h2>
+        <p>paragraph tekst.</p>
+        <span>Zie alle selectors <a href="https://www.w3schools.com/cssref/css_selectors.asp">hier</a></span>
+        
+    </div>
+    <div class="">
+        <p>een tekst zonder opmaak.</p>
+        <p id="unique_text">een tekst met opmaak.</p>
+    </div>
+</body>
+</html>
