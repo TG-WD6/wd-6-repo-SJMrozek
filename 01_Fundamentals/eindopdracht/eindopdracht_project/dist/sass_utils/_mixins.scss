@@ -1,0 +1,7 @@
+@mixin filter-blue {
+    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(324deg) brightness(114%) contrast(101%);
+}
+
+@mixin filter_white {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(102%);
+}

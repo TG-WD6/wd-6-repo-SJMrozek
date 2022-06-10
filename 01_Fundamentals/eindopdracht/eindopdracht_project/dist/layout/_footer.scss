@@ -1,0 +1,7 @@
+@import './sass_utils/mixins', './sass_utils/variables';
+
+.social_media_links a .social_icon {
+    height: 50px;
+    width: 50px;
+    filter: invert(19%) sepia(96%) saturate(2987%) hue-rotate(239deg) brightness(81%) contrast(109%);
+}

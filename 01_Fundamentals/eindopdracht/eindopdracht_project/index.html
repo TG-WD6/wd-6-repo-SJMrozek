@@ -1,51 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Eindopdracht</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="icon" href="images/icons/html_css.png">
+    <link rel="stylesheet" type="text/css" href="dist/style.css">
 </head>
+
 <body>
     <header style="background-color: #2F125F;">
-        <img src="./images/TG_logo.png" alt="techgrounds_logo">
-        <nav class="navbar">
+        <img class="logo" src="./images/TG_logo.png" alt="Techgrounds">
+        <nav class="menu">
+            <input type="checkbox" class="menu_toggler">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul>
-                <li>
-                    <i class="home"></i>
-                </li>
-                <li><i>Popular</i></li>
-                <li></li>
+                <li><a href="#"><img class="icon" src="./images/icons/home.svg">Home</a></li>
+                <li><a href="#"><img class="icon" src="./images/icons/handshake.svg">Popular</a></li>
+                <li><a href="#"><img class="icon" src="./images/icons/pin.svg">Contact</a></li>
             </ul>
-
-
         </nav>
     </header>
-
+    <div class="spacer"></div>
 
     <main>
-        <div class="login">
+        <section class="login">
+            <div class="login_box">
+                <img class="profile_picture" src="./images/placeholder_250x250.png" alt="profile image">
+                <h2>Login</h2>
+                <p>Login with Your Email</p>
+                <form method="post">
+                    <fieldset>
+                        <input type="text" name="email" placeholder="Email"><br>
+                        <input type="password" name="password" placeholder="Password"><br>
+                        <div class="login_options">
+                            <span>
+                                <input type="checkbox" name="remember_me">
+                                <label for="remember_me">Remember me</label>
+                            </span>
+                            <a class="forgot_password" href="#">Forgot Password?</a><br>
+                        </div>
+                        <button class="login_button">
+                            <span><img class="icon" src="./images/icons/drupal.png">LOGIN</span>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
 
-        </div>
-
-        <div class="products">
+        <section class="products">
             <div class="product_card">
-                <img src="" alt="Product Image">
+                <img src="#" alt="Product Image">
                 <div class="description">
                     <p>techgrounds</p>
                     <h3>techgrounds titel</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu felis in nisl lobortis vulputate. Nullam non enim a sapien imperdiet dictum et nec quam. Duis varius convallis metus, in molestie eros dictum eget. In dolor enim, ornare sit amet consequat tempor, mattis ut ex. Curabitur porttitor imperdiet magna ac dictum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu felis in nisl lobortis
+                        vulputate. Nullam non enim a sapien imperdiet dictum et nec quam. Duis varius convallis metus,
+                        in molestie eros dictum eget. In dolor enim, ornare sit amet consequat tempor, mattis ut ex.
+                        Curabitur porttitor imperdiet magna ac dictum.</p>
                 </div>
                 <div class="price">
-                    
-                    
+
+
                 </div>
             </div>
-        </div>
+        </section>
     </main>
-
-    <input type="text" name="" id="">
 
     <footer>
         <div class="klantenservice_links">
@@ -86,17 +112,18 @@
 
         <div class="social_media_links">
             <h4>Wil je ons volgen?</h4>
-                <a href="https://www.facebook.com/Techgrounds/" target="_blank" title="Facebook">
-                    <img class="svg_icon" src="./images/icons/facebook.svg" alt="Facebook"></a>
-                <a href="https://www.instagram.com/techgrounds_nl/" target="_blank" title="Instagram">
-                    <img class="svg_icon" src="./images/icons/instagram.svg" alt="Instagram"></a>
-                <a href="https://nl.linkedin.com/company/techgrounds" target="_blank" title="LinkedIn">
-                    <img class="svg_icon" src="./images/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a href="https://twitter.com/TechGrounds_NL/" target="_blank" title="Twitter">
-                    <img class="svg_icon" src="./images/icons/twitter.svg" alt="Twitter"></a>
+            <a href="https://www.facebook.com/Techgrounds/" target="_blank" title="Facebook">
+                <img class="social_icon" src="./images/icons/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/techgrounds_nl/" target="_blank" title="Instagram">
+                <img class="social_icon" src="./images/icons/instagram.svg" alt="Instagram"></a>
+            <a href="https://nl.linkedin.com/company/techgrounds" target="_blank" title="LinkedIn">
+                <img class="social_icon" src="./images/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://twitter.com/TechGrounds_NL/" target="_blank" title="Twitter">
+                <img class="social_icon" src="./images/icons/twitter.svg" alt="Twitter"></a>
 
         </div>
     </footer>
-    
+
 </body>
+
 </html>

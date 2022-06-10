@@ -1,0 +1,48 @@
+@import './sass_utils/mixins', './sass_utils/variables';
+
+.login_box {
+    max-width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 0px 20px #0000003f;
+    .profile_picture {
+        max-width: 62.5%;
+        max-height: auto;
+        margin: 0 auto;
+        border-radius: 10%;
+    }
+    h2 {
+        margin: 5px;
+    }
+    p {
+        margin: 10px;
+    }
+
+    form fieldset {
+        height: fit-content;
+        padding: 0 30px;
+        border: none;
+        input {
+            &[name=email], &[name=password] {
+                width: 100%;
+                padding: 5px;
+                margin: 15px;
+                border-width: 0 0 1px 0;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        .login_options {
+            width: 100px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+}
