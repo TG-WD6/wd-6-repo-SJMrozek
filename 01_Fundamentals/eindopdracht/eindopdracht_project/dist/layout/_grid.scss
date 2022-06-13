@@ -1,0 +1,23 @@
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px auto auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header {
+    grid-area: header;
+}
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer {
+    grid-area: footer;
+}

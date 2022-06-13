@@ -11,7 +11,7 @@
 }
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size-adjust: 1em;
 }
 
@@ -20,8 +20,49 @@ ul li, ol li {
 }
 
 a {
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
+}
+
+.grid_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 80px auto auto;
+      grid-template-rows: 80px auto auto;
+      grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
 }
 
 .spacer {
@@ -42,6 +83,7 @@ header {
           align-items: center;
   position: fixed;
   z-index: 1;
+  background-color: #2f125f;
 }
 
 header .logo {
@@ -72,8 +114,8 @@ header li a .icon {
   width: 20px;
   height: 20px;
   margin: 5px;
-  -webkit-filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(324deg) brightness(114%) contrast(101%);
-          filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(324deg) brightness(114%) contrast(101%);
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(102%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(102%);
 }
 
 header .menu {
@@ -189,11 +231,11 @@ header .menu .hamburger div {
   }
   header .menu ul {
     position: fixed;
-    height: 100vh;
+    height: 150%;
     width: 100%;
-    padding-top: 70px;
+    padding-top: 80px;
     top: 0;
-    left: 100vw;
+    left: 100%;
     background-color: #2f125f;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -202,16 +244,16 @@ header .menu .hamburger div {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
   }
   header .menu li {
-    -webkit-transform: translateX(100vw);
-            transform: translateX(100vw);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     transition: transform .3s;
@@ -222,16 +264,13 @@ header .menu .hamburger div {
 }
 
 header .menu_toggler:checked ~ ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform: translateX(-100vw);
-          transform: translateX(-100vw);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 header .menu_toggler:checked ~ ul li {
-  -webkit-transform: translateX(0vw);
-          transform: translateX(0vw);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
   -webkit-transition-delay: .5;
           transition-delay: .5;
 }
@@ -252,8 +291,12 @@ header .menu_toggler:checked ~ ul li:nth-of-type(3) {
 }
 
 .login_box {
-  max-width: 400px;
-  height: 500px;
+  width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  margin: 50px auto;
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,33 +313,52 @@ header .menu_toggler:checked ~ ul li:nth-of-type(3) {
           box-shadow: 0px 0px 20px #0000003f;
 }
 
+.login_box > * {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .login_box .profile_picture {
-  max-width: 62.5%;
-  max-height: auto;
+  background-image: url(../images/placeholder_250x250.png);
+  background-size: 100%;
+  width: 250px;
+  height: 250px;
   margin: 0 auto;
   border-radius: 10%;
 }
 
 .login_box h2 {
-  margin: 5px;
+  font-size: xx-large;
 }
 
 .login_box p {
-  margin: 10px;
+  color: #acacac;
+  font-size: large;
+  font-weight: 100;
 }
 
 .login_box form fieldset {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 0 30px;
+  padding: 0px;
+  margin-top: 20px;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .login_box form fieldset input[name=email], .login_box form fieldset input[name=password] {
   width: 100%;
   padding: 5px;
-  margin: 5px;
+  margin: 5px 0;
   border-width: 0 0 1px 0;
 }
 
@@ -306,7 +368,7 @@ header .menu_toggler:checked ~ ul li:nth-of-type(3) {
 
 .login_box form fieldset .login_options {
   width: 100%;
-  margin: 10px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,16 +377,56 @@ header .menu_toggler:checked ~ ul li:nth-of-type(3) {
           justify-content: space-between;
 }
 
-.login_box form fieldset .login_button .icon {
-  height: 100%;
+.login_box form fieldset .confirm_button {
   width: 100%;
-  -webkit-filter: invert(96%) sepia(100%) saturate(16%) hue-rotate(237deg) brightness(105%) contrast(103%);
-          filter: invert(96%) sepia(100%) saturate(16%) hue-rotate(237deg) brightness(105%) contrast(103%);
+  height: 50px;
+  background-color: #2323eb;
+  color: white;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.login_box form fieldset .confirm_button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login_box form fieldset .confirm_button span .icon {
+  height: 2em;
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(102%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(102%);
 }
 
 .social_media_links a .social_icon {
   height: 50px;
   width: 50px;
-  -webkit-filter: invert(19%) sepia(96%) saturate(2987%) hue-rotate(239deg) brightness(81%) contrast(109%);
-          filter: invert(19%) sepia(96%) saturate(2987%) hue-rotate(239deg) brightness(81%) contrast(109%);
+  -webkit-filter: invert(19%) sepia(100%) saturate(2821%) hue-rotate(239deg) brightness(82%) contrast(130%);
+          filter: invert(19%) sepia(100%) saturate(2821%) hue-rotate(239deg) brightness(82%) contrast(130%);
+}
+
+.link_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
