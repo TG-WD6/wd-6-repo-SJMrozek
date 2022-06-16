@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Functions</title>
+    <script src="main.js" defer></script>
+    <link rel="icon" href="../../images/Javascript_logo.png">
+    <style>
+        * {
+            font-family: monospace;
+        }
+        
+        body {
+            margin: 0;
+            padding: 10px;
+            background-color: rgb(202, 193, 255);
+        }
+        button {
+            width: 100px;
+            height: 50px;
+            color: white;
+            background-color: rgb(89, 74, 185);
+            border: none;
+            border-radius: 5px;
+        }
+
+        Button:active {
+            background-color: rgb(72, 61, 139);
+        }
+
+        #teamCheck {
+            width: fit-content;
+        }
+
+        div {
+            width: fit-content;
+            height: 18px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="helloWorld()">Log "Hello World"</button><br>
+    <br>
+    <input id="textInput" onchange="logParam(textInputElement)" type="text" placeholder="log parameter on change"><br>
+    <input oninput="logValue(this)" type="text" placeholder="log value on input"><br>
+    <br>
+    <button onclick="randomNumber(10)">Log Random Number</button><br>
+    <br>
+    <p>Type a name and see if that person is a member of our first Javascript group.</p>
+    <input id="teamCheck" onchange="checkMemberArrow(this.value)" type="text"><br><br>
+    <div id="memberResult"></div>
+    <p>Paragraph <span>1</span></p>
+    <p>Paragraph <span>2</span></p>
+    <span>A <span class="highlight">span</span> text</span>
+</body>
+</html>
