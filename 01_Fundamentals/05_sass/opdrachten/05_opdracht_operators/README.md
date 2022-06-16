@@ -1,4 +1,4 @@
-<img src="../images/sass_logo.svg" alt="Sass logo" height="100" >
+<img src="../../images/sass_logo.svg" alt="Sass logo" height="100" >
 
 <br>
 
