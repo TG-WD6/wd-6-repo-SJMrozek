@@ -23,3 +23,5 @@ De Javascript codes vindt je in [main.js](./main.js)
 <br>
 
 - Nu staat er geen 'constructor' in het prototype, maar wel de template die ik heb gemaakt met de oorspronkelijke waardes.
+
+<br><hr>
