@@ -145,9 +145,9 @@ console.log(arrayLike); // Toont een nodeList! dat is een soort DOM object!
 // filter()
     {
     const array = [11, 26, 32, 43, 58, 61, 70];
-
+    
     const result = array.filter(element => element > 50);
-
+    
     console.log(result);
     }
 
@@ -165,17 +165,22 @@ console.log(arrayLike); // Toont een nodeList! dat is een soort DOM object!
     const array = [1, 2, 3, 4, 5];
     
     const even = (element) => element % 2 === 0;
-
+    
     console.log(array.some(even));
     }
 
 // every()
     {
     const isBelowThreshold = (currentValue) => currentValue < 40;
+    
+    const array = [1, 30, 39, 29, 10, 13];
+    
+    console.log(array.every(isBelowThreshold));
+    }
 
-    const array1 = [1, 30, 39, 29, 10, 13];
-
-    console.log(array1.every(isBelowThreshold));
-// expected output: true
-
+// includes()
+    {
+    const array = ["abc", "def", "ghi"];
+    
+    console.log(array.includes("def"));
     }

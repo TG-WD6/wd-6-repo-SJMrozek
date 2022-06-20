@@ -61,10 +61,26 @@ De Javascript codes vindt je in [main.js](./main.js)
     <br>
 
 - every()
-    Test of alle elementen van het array door te test komen die in de functie staan en geeft een Boolean waarde terug.
+    Test of alle elementen van het array door te test komen die in de functie staan en geeft een boolean waarde terug. Als maar 1 array item niet true is bij de test, wordt het eindresultaat alsnog false.
 
     ```js
+    const isBelowThreshold = (currentValue) => currentValue < 40;
 
+    const array = [1, 30, 39, 29, 10, 13];
+
+    console.log(array.every(isBelowThreshold));
     ```
+    console:
+    > true
 
 - includes()
+    Checkt of een array een specifieke value bevat. Geeft een boolean waarde terug.
+    ```js
+    const array = ["abc", "def", "ghi"];
+
+    console.log(array.includes("def"));
+    ```
+    console:
+    > true
+
+    <br><hr>
