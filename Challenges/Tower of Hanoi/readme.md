@@ -2,6 +2,8 @@
 
 In deze challenge is het de bedoeling dat je de Tower of Hanoi oplost met code. Gebruik hiervoor recursion.
 
+- klik [hier](https://youtu.be/0BDi0d1j7u0?t=513) voor wat extra informatie.
+
 De onderstaande code is de basis voor de puzzel.
 ```js
 class Puzzle {

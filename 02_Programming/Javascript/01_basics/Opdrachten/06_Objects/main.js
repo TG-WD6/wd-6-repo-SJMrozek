@@ -124,7 +124,7 @@
             this.name = name;
             this.type = type;
             this.members = members;
-            this.contact = new ContactInfo(addres, phone, contactPerson);
+            this.contactInfo = new ContactInfo(addres, phone, contactPerson);
         }
     }
 
@@ -136,27 +136,23 @@
         }
     }
 
-
     // 6.2.3
-    const clubA = new Club("Club One","Gambling", 67,"12th Alphabet Street","020-9165834","Steven Grace")
-    const clubB = new Club("Business Club", "Business", 15,"1st Busniness Street", "06-23324811", "Vince Prince")
-    const clubC = new Club("Clubby Club", "Night Club", 26,"8th Club Street", "020-18707523", "Trevor Holland")
-    const clubD = new Club("Green Field", "Golf Club", 33, "15th National Park","020-8245210", "Mark Winston")
-    const clubE = new Club("the Fifth Club", "Cultre", 6,"5th Culture Street", "020-7171354", "Daniel Chesterfield")
+    const clubA = new Club("Club One","Gambling", 67,"12th Alphabet Street","020-9165834","Steven Grace");
+    const clubB = new Club("Business Club", "Business", 15,"1st Busniness Street", "06-23324811", "Vince Prince");
+    const clubC = new Club("Clubby Club", "Night Club", 26,"8th Club Street", "020-18707523", "Trevor Holland");
+    const clubD = new Club("Green Field", "Golf Club", 33, "15th National Park","020-8245210", "Mark Winston");
+    const clubE = new Club("the Fifth Club", "Cultre", 6,"5th Culture Street", "020-7171354", "Daniel Chesterfield");
 
-    const clubs = [clubA, clubB, clubC, clubD, clubE];
+    const clubArray = [clubA, clubB, clubC, clubD, clubE];
 
-    clubs.forEach(club => console.log(`${club.name} --- ${club.contact.phone} --- ${club.contact.contactPerson}`));
+    clubArray.forEach(club => console.log(`${club.name} -- ${club.contactInfo.phone} -- ${club.contactInfo.contactPerson}`));
 
 
     // 6.2.4
-    clubA.contact.contactPerson = "Billie Jean";
-    clubB.contact.contactPerson = "Billie Jean";
-
-    clubB.contact.contactPerson = "Billy Jeans"
-
-    console.log(clubA.contact.contactPerson);
-    // Alles werkt, dus de console logt "Billie Jean", als ik de contactpersoon van clubB log logt de console "Billy Jeans"
+    clubA.contactInfo.contactPerson = clubB.contactInfo.contactPerson;
+    clubB.contactInfo.contactPerson = "gf"
+    
+    console.log(clubA.contactInfo.contactPerson);
 }
 
 
