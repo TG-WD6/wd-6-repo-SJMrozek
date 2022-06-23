@@ -1,4 +1,4 @@
-# Retro Week 1 \##
+# Retro Sprint 1 Week 1
 
 ## Wat ging goed
 1. De initiele overweldigheid van de hoeveelheid leerwerk verminderen.

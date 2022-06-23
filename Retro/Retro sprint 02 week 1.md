@@ -1,4 +1,4 @@
-# Retro Week 03
+# Retro Sprint 2 Week 1
 
 ## Wat ging goed
 
