@@ -11,6 +11,10 @@ const red = document.getElementById("red");
 const green = document.getElementById("green");
 const blue = document.getElementById("blue");
 
+const satellitePrimaryColor = document.getElementById("secArrow");
+const satelliteSecondaryColor = document.getElementById("secArrow");
+body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+body.style.backgroundColor = `rgb(${0}, ${0}, ${0}, 0)`;
 
 {   // settings
     let isActive = false
@@ -35,9 +39,25 @@ const blue = document.getElementById("blue");
         body.style.animationDuration = speed.value + "s";
     }
 
+        //type yes to change secondary color, otherwise set to primary
+    let text = document.getElementById("text").value
+    function updateText() {
+        text = document.getElementById("text").value
+    }
 
     function setColor(red, green, blue) {
-        body.style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+        // body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        
+        text = document.getElementById("text").value
+        
+            // switch statement for choosing color to change
+        switch (text) {
+            case "yes":
+                satelliteSecondaryColor.style.setProperty('--secondary-color',`rgb(${red}, ${green}, ${blue})`)
+                break;
+            default:
+                satellitePrimaryColor.style.setProperty('--primary-color',`rgb(${red}, ${green}, ${blue})`);
+        }
     }
 
     // function setTitle(red, green, blue) {
@@ -51,11 +71,11 @@ const blue = document.getElementById("blue");
 }
 
 {   // clock    copied from W3Schools
-    const clock = document.getElementById('digitalClock');
-    const secArrow = document.getElementById('secArrow');
-    const minArrow = document.getElementById('minArrow');
-    const hrArrow = document.getElementById('hrArrow');
-    const secDigits = document.getElementById
+    const clock = document.getElementById("digitalClock");
+    const secArrow = document.getElementById("secArrow");
+    const minArrow = document.getElementById("minArrow");
+    const hrArrow = document.getElementById("hrArrow");
+    
 
     let tic1 = new Audio("./audio/ticking/clock01-1.mp3");
     tic1.volume = 1;
@@ -79,6 +99,7 @@ const blue = document.getElementById("blue");
         hrArrow.style.transform = `rotate(${(360 / 12 * h)}deg)`;
         minArrow.style.transform = `rotate(${(360 / 60 * m)}deg)`;
         secArrow.style.transform = `rotate(${(360 / 60 * s)}deg)`;
+        // secArrowBefore.style.transform = `rotate(${(360 / 60 * s)}deg)`;
         setTimeout(startTime,1)
     }
 
@@ -161,10 +182,16 @@ const blue = document.getElementById("blue");
         } else if (m == 30 && s == 0) {
             alarm()
         }
+
+        if(h == 10 && m == 15) {
+            
+        }
     }
     
     function checkTime(i) {
         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
         return i;
     }
+
+    
 }

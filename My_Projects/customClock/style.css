@@ -38,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: balck;
+    /* background-color: black; */
 }
 
 
@@ -51,9 +51,9 @@ body {
     height: 35vw;
     border: 10px;
     border-radius: 50%;
-    /* background: url(./images/moon-dark.png);
-    background-size: 101%;
-    background-position: center; */
+    background: url(./images/moon-dark.png);
+    background-size: 110%;
+    background-position: center;
     box-shadow:
     /* MOON LIGHTING */
     inset -15vw 0 6vw -9vw rgba(255, 255, 255, 0.5),
@@ -66,7 +66,7 @@ body {
     45vw  0 2.5vw -15vw rgb(255, 238, 207),
 
     /* BACKGROUND */
-    0 0 0 100vw rgb(255, 255, 255);
+    0 0 0 100vw black;
     ;
     z-index: 1;
 }
@@ -104,10 +104,18 @@ body {
 } */
 
 
-
+#analogClock #secArrow{
+    --primary-color: darkgray;
+    --secondary-color: rgb(211, 150, 101);
+    --solPanel-color: rgb(39, 33, 121);
+    --solPanel-shadow: rgb(24, 19, 90);
+}
 #analogClock #secArrow::before{
     content: "";
     position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    
     /* width: 0.25vw;
     bottom: -2vw;
     height: 20.5vw;
@@ -134,91 +142,95 @@ body {
     box-shadow: inset 0 0 0.3vw 0 rgba(0, 0, 0, 0.466); */
 
     /*===== SATELLITE =====*/
-    --SatelliteBodyColor: lightgray;
-    overflow: hidden;
     width: 0.85vw;
     height: 1vw;
     bottom: 22vw;
     border-radius: 25%;
     border-bottom: 0.2vw solid;
     border-inline: 0.3vw solid rgb(85, 85, 85);
-    border-inline-style: dashed  dashed ;
+    border-inline-style: dashed dashed ;
     border-block-start-width: 0;
-    border-bottom-color: var(--SatelliteBodyColor);
-    background-color: rgb(211, 150, 101);
+    border-bottom-color: rgb(85, 85, 85);
+    background-color: var(--secondary-color);
     box-shadow:
-    /*--- WINDOW FRAME ---*/
-    inset 0 -0.2vw 0.2vw 0.12vw var(--SatelliteBodyColor),
+    /*--- SATELLITE BODY ---*/
+            /* WINDOW */
+    inset 0 -0.2vw 0.2vw 0.12vw var(--primary-color),
+    inset 0 -0.2vw 0.1vw 0.22vw rgb(56, 56, 56),
     inset 0 -0.2vw 0.1vw 0.22vw rgb(56, 56, 56),
 
+            /* SAUCER ROD */
+    0 0.65vw 0vw -0.5vw rgb(100, 100, 100),
     
-    /*--- STELLITE BODY FRONT ---*/
+
+    
+    /*--- SATELLITE BODY FRONT ---*/
             /* SOLAR PANELS R */
-    3.36vw 0.4vw 0 -0.4vw rgb(24, 19, 90),
-    3.335vw 0.6vw 0 -0.4vw rgb(39, 33, 121),
-    3.36vw 1vw 0 -0.4vw rgb(24, 19, 90),
-    3.335vw 1.2vw 0 -0.4vw rgb(39, 33, 121),
-    3.36vw 1.6vw 0 -0.4vw rgb(24, 19, 90),
-    3.335vw 1.8vw 0 -0.4vw rgb(39, 33, 121),
-    3.36vw 2.2vw 0 -0.4vw rgb(24, 19, 90),
-    3.335vw 2.4vw 0 -0.4vw rgb(39, 33, 121),
-    3.36vw 2.8vw 0 -0.4vw rgb(24, 19, 90),
-    3.335vw 3vw 0 -0.4vw rgb(39, 33, 121),
-    3.36vw 3.4vw 0 -0.4vw rgb(24, 19, 90),
-    3.335vw 3.6vw 0 -0.4vw rgb(39, 33, 121),
-    2.415vw 3.6vw 0 -0.4vw rgb(24, 19, 90),
-    2.44vw 3.4vw 0 -0.4vw rgb(39, 33, 121),
-    2.415vw 3vw 0 -0.4vw rgb(24, 19, 90),
-    2.44vw 2.8vw 0 -0.4vw rgb(39, 33, 121),
-    2.415vw 2.4vw 0 -0.4vw rgb(24, 19, 90),
-    2.44vw 2.2vw 0 -0.4vw rgb(39, 33, 121),
-    2.415vw 1.8vw 0 -0.4vw rgb(24, 19, 90),
-    2.44vw 1.6vw 0 -0.4vw rgb(39, 33, 121),
-    2.41vw 1.2vw 0 -0.4vw rgb(24, 19, 90),
-    2.44vw 1vw 0 -0.4vw rgb(39, 33, 121),
-    2.415vw 0.6vw 0 -0.4vw rgb(24, 19, 90),
-    2.44vw 0.4vw 0 -0.4vw rgb(39, 33, 121),
+    3.36vw 0.4vw 0 -0.4vw var(--solPanel-shadow),
+    3.335vw 0.6vw 0 -0.4vw var(--solPanel-color),
+    3.36vw 1vw 0 -0.4vw var(--solPanel-shadow),
+    3.335vw 1.2vw 0 -0.4vw var(--solPanel-color),
+    3.36vw 1.6vw 0 -0.4vw var(--solPanel-shadow),
+    3.335vw 1.8vw 0 -0.4vw var(--solPanel-color),
+    3.36vw 2.2vw 0 -0.4vw var(--solPanel-shadow),
+    3.335vw 2.4vw 0 -0.4vw var(--solPanel-color),
+    3.36vw 2.8vw 0 -0.4vw var(--solPanel-shadow),
+    3.335vw 3vw 0 -0.4vw var(--solPanel-color),
+    3.36vw 3.4vw 0 -0.4vw var(--solPanel-shadow),
+    3.335vw 3.6vw 0 -0.4vw var(--solPanel-color),
+    2.415vw 3.6vw 0 -0.4vw var(--solPanel-shadow),
+    2.44vw 3.4vw 0 -0.4vw var(--solPanel-color),
+    2.415vw 3vw 0 -0.4vw var(--solPanel-shadow),
+    2.44vw 2.8vw 0 -0.4vw var(--solPanel-color),
+    2.415vw 2.4vw 0 -0.4vw var(--solPanel-shadow),
+    2.44vw 2.2vw 0 -0.4vw var(--solPanel-color),
+    2.415vw 1.8vw 0 -0.4vw var(--solPanel-shadow),
+    2.44vw 1.6vw 0 -0.4vw var(--solPanel-color),
+    2.41vw 1.2vw 0 -0.4vw var(--solPanel-shadow),
+    2.44vw 1vw 0 -0.4vw var(--solPanel-color),
+    2.415vw 0.6vw 0 -0.4vw var(--solPanel-shadow),
+    2.44vw 0.4vw 0 -0.4vw var(--solPanel-color),
     2.3vw 0.2vw 0 -0.55vw rgb(212, 144, 81),
     2.65vw 0.2vw 0 -0.55vw rgb(212, 144, 81),
     2.9vw 0.15vw 0 -0.5vw rgb(212, 144, 81),
     3.15vw 0.2vw 0 -0.55vw rgb(212, 144, 81),
     3.5vw 0.2vw 0 -0.55vw rgb(212, 144, 81),
             /* CENTER ROD*/
-    1.1vw -0.2vw 0 -0.55vw rgb(88, 88, 88),
-    1.1vw 0 0 -0.55vw rgb(88, 88, 88),
-    1.1vw 0.2vw 0 -0.55vw rgb(88, 88, 88),
+    1.1vw -0.2vw 0 -0.55vw rgba(0, 0, 0, 0.25),
+    1.1vw 0 0 -0.55vw rgba(0, 0, 0, 0.25),
+    1.1vw 0.2vw 0 -0.55vw rgba(0, 0, 0, 0.25),
     1vw 0 0 -0.2vw rgb(0,0,0,0.4),
-    1vw 0 0 -0.2vw var(--SatelliteBodyColor),
+    1vw 0 0 -0.2vw var(--primary-color),
     1.55vw 0 0 -0.45vw rgb(150, 150, 150),
-    2.05vw 0 0 -0.5vw rgb(140, 140, 140),
-    2.4vw 0 0 -0.53vw rgb(130, 130, 130),
+    2vw 0 0 -0.49vw rgb(140, 140, 140),
+    2.4vw 0 0 -0.51vw rgb(130, 130 ,130),
     2.9vw 0 0 -0.4vw rgb(150, 150, 150),
-    3.4vw 0 0 -0.53vw rgb(80, 80, 80),
+    3.4vw 0 0 -0.5vw rgb(80, 80, 80),
             /* --- SOLAR PANEL L --- */
-    2.44vw -0.4vw 0 -0.4vw rgb(24, 19, 90),
-    2.415vw -0.6vw 0 -0.4vw rgb(39, 33, 121),
-    2.44vw -1vw 0 -0.4vw rgb(24, 19, 90),
-    2.415vw -1.2vw 0 -0.4vw rgb(39, 33, 121),
-    2.44vw -1.6vw 0 -0.4vw rgb(24, 19, 90),
-    2.415vw -1.8vw 0 -0.4vw rgb(39, 33, 121),
-    2.44vw -2.2vw 0 -0.4vw rgb(24, 19, 90),
-    2.415vw -2.4vw 0 -0.4vw rgb(39, 33, 121),
-    2.44vw -2.8vw 0 -0.4vw rgb(24, 19, 90),
-    2.415vw -3vw 0 -0.4vw rgb(39, 33, 121),
-    2.44vw -3.4vw 0 -0.4vw rgb(24, 19, 90),
-    2.415vw -3.6vw 0 -0.4vw rgb(39, 33, 121),
-    3.335vw -3.6vw 0 -0.4vw rgb(24, 19, 90),
-    3.36vw -3.4vw 0 -0.4vw rgb(39, 33, 121),
-    3.335vw -3vw 0 -0.4vw rgb(24, 19, 90),
-    3.36vw -2.8vw 0 -0.4vw rgb(39, 33, 121),
-    3.335vw -2.4vw 0 -0.4vw rgb(24, 19, 90),
-    3.36vw -2.2vw 0 -0.4vw rgb(39, 33, 121),
-    3.335vw -1.8vw 0 -0.4vw rgb(24, 19, 90),
-    3.36vw -1.6vw 0 -0.4vw rgb(39, 33, 121),
-    3.335vw -1.2vw 0 -0.4vw rgb(24, 19, 90),
-    3.36vw -1vw 0 -0.4vw rgb(39, 33, 121),
-    3.335vw -0.6vw 0 -0.4vw rgb(24, 19, 90),
-    3.36vw -0.4vw 0 -0.4vw rgb(39, 33, 121),
+    2.44vw -0.4vw 0 -0.4vw var(--solPanel-shadow),
+    2.415vw -0.6vw 0 -0.4vw var(--solPanel-color),
+    2.44vw -1vw 0 -0.4vw var(--solPanel-shadow),
+    2.415vw -1.2vw 0 -0.4vw var(--solPanel-color),
+    2.44vw -1.6vw 0 -0.4vw var(--solPanel-shadow),
+    2.415vw -1.8vw 0 -0.4vw var(--solPanel-color),
+    2.44vw -2.2vw 0 -0.4vw var(--solPanel-shadow),
+    2.415vw -2.4vw 0 -0.4vw var(--solPanel-color),
+    2.44vw -2.8vw 0 -0.4vw var(--solPanel-shadow),
+    2.415vw -3vw 0 -0.4vw var(--solPanel-color),
+    2.44vw -3.4vw 0 -0.4vw var(--solPanel-shadow),
+    2.415vw -3.6vw 0 -0.4vw var(--solPanel-color),
+    3.335vw -3.6vw 0 -0.4vw var(--solPanel-shadow),
+    3.36vw -3.4vw 0 -0.4vw var(--solPanel-color),
+    3.335vw -3vw 0 -0.4vw var(--solPanel-shadow),
+    3.36vw -2.8vw 0 -0.4vw var(--solPanel-color),
+    3.335vw -2.4vw 0 -0.4vw var(--solPanel-shadow),
+    3.36vw -2.2vw 0 -0.4vw var(--solPanel-color),
+    3.335vw -1.8vw 0 -0.4vw var(--solPanel-shadow),
+    3.36vw -1.6vw 0 -0.4vw var(--solPanel-color),
+    3.335vw -1.2vw 0 -0.4vw var(--solPanel-shadow),
+    3.36vw -1vw 0 -0.4vw var(--solPanel-color),
+    3.335vw -0.6vw 0 -0.4vw var(--solPanel-shadow),
+    3.36vw -0.4vw 0 -0.4vw var(--solPanel-color),
     2.3vw -0.2vw 0 -0.55vw rgb(212, 144, 81),
     2.65vw -0.2vw 0 -0.55vw rgb(212, 144, 81),
     2.9vw -0.15vw 0 -0.5vw rgb(212, 144, 81),
@@ -226,84 +238,98 @@ body {
     3.5vw -0.2vw 0 -0.55vw rgb(212, 144, 81),
 
 
-    /*--- STELLITE BODY BACK ---*/
+    /*--- SATELLITE BODY BACK ---*/
             /* SOLAR PANEL R */
-    -3.36vw 0.4vw 0 -0.4vw rgb(24, 19, 90),
-    -3.335vw 0.6vw 0 -0.4vw rgb(39, 33, 121),
-    -3.36vw 1vw 0 -0.4vw rgb(24, 19, 90),
-    -3.335vw 1.2vw 0 -0.4vw rgb(39, 33, 121),
-    -3.36vw 1.6vw 0 -0.4vw rgb(24, 19, 90),
-    -3.335vw 1.8vw 0 -0.4vw rgb(39, 33, 121),
-    -3.36vw 2.2vw 0 -0.4vw rgb(24, 19, 90),
-    -3.335vw 2.4vw 0 -0.4vw rgb(39, 33, 121),
-    -3.36vw 2.8vw 0 -0.4vw rgb(24, 19, 90),
-    -3.335vw 3vw 0 -0.4vw rgb(39, 33, 121),
-    -3.36vw 3.4vw 0 -0.4vw rgb(24, 19, 90),
-    -3.335vw 3.6vw 0 -0.4vw rgb(39, 33, 121),
-    -2.415vw 3.6vw 0 -0.4vw rgb(24, 19, 90),
-    -2.44vw 3.4vw 0 -0.4vw rgb(39, 33, 121),
-    -2.415vw 3vw 0 -0.4vw rgb(24, 19, 90),
-    -2.44vw 2.8vw 0 -0.4vw rgb(39, 33, 121),
-    -2.415vw 2.4vw 0 -0.4vw rgb(24, 19, 90),
-    -2.44vw 2.2vw 0 -0.4vw rgb(39, 33, 121),
-    -2.415vw 1.8vw 0 -0.4vw rgb(24, 19, 90),
-    -2.44vw 1.6vw 0 -0.4vw rgb(39, 33, 121),
-    -2.41vw 1.2vw 0 -0.4vw rgb(24, 19, 90),
-    -2.44vw 1vw 0 -0.4vw rgb(39, 33, 121),
-    -2.415vw 0.6vw 0 -0.4vw rgb(24, 19, 90),
-    -2.44vw 0.4vw 0 -0.4vw rgb(39, 33, 121),
+    -3.36vw 0.4vw 0 -0.4vw var(--solPanel-shadow),
+    -3.335vw 0.6vw 0 -0.4vw var(--solPanel-color),
+    -3.36vw 1vw 0 -0.4vw var(--solPanel-shadow),
+    -3.335vw 1.2vw 0 -0.4vw var(--solPanel-color),
+    -3.36vw 1.6vw 0 -0.4vw var(--solPanel-shadow),
+    -3.335vw 1.8vw 0 -0.4vw var(--solPanel-color),
+    -3.36vw 2.2vw 0 -0.4vw var(--solPanel-shadow),
+    -3.335vw 2.4vw 0 -0.4vw var(--solPanel-color),
+    -3.36vw 2.8vw 0 -0.4vw var(--solPanel-shadow),
+    -3.335vw 3vw 0 -0.4vw var(--solPanel-color),
+    -3.36vw 3.4vw 0 -0.4vw var(--solPanel-shadow),
+    -3.335vw 3.6vw 0 -0.4vw var(--solPanel-color),
+    -2.415vw 3.6vw 0 -0.4vw var(--solPanel-shadow),
+    -2.44vw 3.4vw 0 -0.4vw var(--solPanel-color),
+    -2.415vw 3vw 0 -0.4vw var(--solPanel-shadow),
+    -2.44vw 2.8vw 0 -0.4vw var(--solPanel-color),
+    -2.415vw 2.4vw 0 -0.4vw var(--solPanel-shadow),
+    -2.44vw 2.2vw 0 -0.4vw var(--solPanel-color),
+    -2.415vw 1.8vw 0 -0.4vw var(--solPanel-shadow),
+    -2.44vw 1.6vw 0 -0.4vw var(--solPanel-color),
+    -2.41vw 1.2vw 0 -0.4vw var(--solPanel-shadow),
+    -2.44vw 1vw 0 -0.4vw var(--solPanel-color),
+    -2.415vw 0.6vw 0 -0.4vw var(--solPanel-shadow),
+    -2.44vw 0.4vw 0 -0.4vw var(--solPanel-color),
+    -2.3vw 0.2vw 0 -0.55vw rgb(212, 144, 81),
+    -2.65vw 0.2vw 0 -0.55vw rgb(212, 144, 81),
     -2.9vw 0.15vw 0 -0.5vw rgb(212, 144, 81),
+    -3.15vw 0.2vw 0 -0.55vw rgb(212, 144, 81),
+    -3.5vw 0.2vw 0 -0.55vw rgb(212, 144, 81),
             /* CENTER ROD */
-    -1.1vw -0.2vw 0 -0.55vw rgb(88, 88, 88),
-    -1.1vw 0 0 -0.55vw rgb(88, 88, 88),
-    -1.1vw 0.2vw 0 -0.55vw rgb(88, 88, 88),
+    -1.1vw -0.2vw 0 -0.55vw rgba(0, 0, 0, 0.25),
+    -1.1vw 0 0 -0.55vw rgba(0, 0, 0, 0.25),
+    -1.1vw 0.2vw 0 -0.55vw rgba(0, 0, 0, 0.25),
     -1vw 0 0 -0.2vw rgb(0,0,0,0.4),
-    -1vw 0 0 -0.2vw var(--SatelliteBodyColor),
+    -1vw 0 0 -0.2vw var(--primary-color),
     -1.55vw 0 0 -0.45vw rgb(150, 150, 150),
-    -2.05vw 0 0 -0.5vw rgb(140, 140, 140),
-    -2.4vw 0 0 -0.53vw rgb(130, 130 ,130),
+    -2.0vw 0 0 -0.49vw rgb(140, 140, 140),
+    -2.4vw 0 0 -0.51vw rgb(130, 130 ,130),
     -2.9vw 0 0 -0.4vw rgb(150, 150, 150),
-    -3.4vw 0 0 -0.53vw rgb(80, 80, 80),
+    -3.4vw 0 0 -0.5vw rgb(80, 80, 80),
             /* --- SOLAR PANEL L --- */
-    -2.44vw -0.4vw 0 -0.4vw rgb(24, 19, 90),
-    -2.415vw -0.6vw 0 -0.4vw rgb(39, 33, 121),
-    -2.44vw -1vw 0 -0.4vw rgb(24, 19, 90),
-    -2.415vw -1.2vw 0 -0.4vw rgb(39, 33, 121),
-    -2.44vw -1.6vw 0 -0.4vw rgb(24, 19, 90),
-    -2.415vw -1.8vw 0 -0.4vw rgb(39, 33, 121),
-    -2.44vw -2.2vw 0 -0.4vw rgb(24, 19, 90),
-    -2.415vw -2.4vw 0 -0.4vw rgb(39, 33, 121),
-    -2.44vw -2.8vw 0 -0.4vw rgb(24, 19, 90),
-    -2.415vw -3vw 0 -0.4vw rgb(39, 33, 121),
-    -2.44vw -3.4vw 0 -0.4vw rgb(24, 19, 90),
-    -2.415vw -3.6vw 0 -0.4vw rgb(39, 33, 121),
-    -3.335vw -3.6vw 0 -0.4vw rgb(24, 19, 90),
-    -3.36vw -3.4vw 0 -0.4vw rgb(39, 33, 121),
-    -3.335vw -3vw 0 -0.4vw rgb(24, 19, 90),
-    -3.36vw -2.8vw 0 -0.4vw rgb(39, 33, 121),
-    -3.335vw -2.4vw 0 -0.4vw rgb(24, 19, 90),
-    -3.36vw -2.2vw 0 -0.4vw rgb(39, 33, 121),
-    -3.335vw -1.8vw 0 -0.4vw rgb(24, 19, 90),
-    -3.36vw -1.6vw 0 -0.4vw rgb(39, 33, 121),
-    -3.335vw -1.2vw 0 -0.4vw rgb(24, 19, 90),
-    -3.36vw -1vw 0 -0.4vw rgb(39, 33, 121),
-    -3.335vw -0.6vw 0 -0.4vw rgb(24, 19, 90),
-    -3.36vw -0.4vw 0 -0.4vw rgb(39, 33, 121),
-    -2.9vw -0.15vw 0 -0.5vw rgb(212, 144, 81)
+    -2.44vw -0.4vw 0 -0.4vw var(--solPanel-shadow),
+    -2.415vw -0.6vw 0 -0.4vw var(--solPanel-color),
+    -2.44vw -1vw 0 -0.4vw var(--solPanel-shadow),
+    -2.415vw -1.2vw 0 -0.4vw var(--solPanel-color),
+    -2.44vw -1.6vw 0 -0.4vw var(--solPanel-shadow),
+    -2.415vw -1.8vw 0 -0.4vw var(--solPanel-color),
+    -2.44vw -2.2vw 0 -0.4vw var(--solPanel-shadow),
+    -2.415vw -2.4vw 0 -0.4vw var(--solPanel-color),
+    -2.44vw -2.8vw 0 -0.4vw var(--solPanel-shadow),
+    -2.415vw -3vw 0 -0.4vw var(--solPanel-color),
+    -2.44vw -3.4vw 0 -0.4vw var(--solPanel-shadow),
+    -2.415vw -3.6vw 0 -0.4vw var(--solPanel-color),
+    -3.335vw -3.6vw 0 -0.4vw var(--solPanel-shadow),
+    -3.36vw -3.4vw 0 -0.4vw var(--solPanel-color),
+    -3.335vw -3vw 0 -0.4vw var(--solPanel-shadow),
+    -3.36vw -2.8vw 0 -0.4vw var(--solPanel-color),
+    -3.335vw -2.4vw 0 -0.4vw var(--solPanel-shadow),
+    -3.36vw -2.2vw 0 -0.4vw var(--solPanel-color),
+    -3.335vw -1.8vw 0 -0.4vw var(--solPanel-shadow),
+    -3.36vw -1.6vw 0 -0.4vw var(--solPanel-color),
+    -3.335vw -1.2vw 0 -0.4vw var(--solPanel-shadow),
+    -3.36vw -1vw 0 -0.4vw var(--solPanel-color),
+    -3.335vw -0.6vw 0 -0.4vw var(--solPanel-shadow),
+    -3.36vw -0.4vw 0 -0.4vw var(--solPanel-color),
+    -2.3vw -0.2vw 0 -0.55vw rgb(212, 144, 81),
+    -2.65vw -0.2vw 0 -0.55vw rgb(212, 144, 81),
+    -2.9vw -0.15vw 0 -0.5vw rgb(212, 144, 81),
+    -3.15vw -0.2vw 0 -0.55vw rgb(212, 144, 81),
+    -3.5vw -0.2vw 0 -0.55vw rgb(212, 144, 81)
     ;
+}
+
+#analogClock #secArrow {
+    --SaucerColor:white;
 }
 /* === SATELLITE SAUCER === */
 #analogClock #secArrow::after{
-    --SaucerColor:darkgray;
     content: "";
     position: absolute;
-    --SatelliteBodyColor: lightgray;
     overflow: hidden;
-    width: 0.3vw;
-    height: 0.3vw;
-    bottom: 21vw;
+    width: 3vw;
+    height: 2vw;
+    bottom: 20.5vw;
     border-radius: 50%;
-    background-color: red;
+    border: 0.2vw dashed yellow green;
+    background-color: rgb(120, 120, 120);
+    box-shadow: 
+    inset 0 -0.4vw 1vw 0 var(--SaucerColor)
+    ;
 }
 
 
