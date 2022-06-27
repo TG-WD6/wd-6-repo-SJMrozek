@@ -12,7 +12,7 @@ header {
     align-items: center;
     position: fixed;
     z-index: 1;
-    background-color: $secondary-color;
+    background-color: $secondary_color;
     .logo {
         position: relative;
         display: flex;
@@ -100,6 +100,7 @@ header {
         .logo {
             align-self: center;
             z-index: 2;
+            width: 50%;
         }
     }
 
@@ -126,7 +127,7 @@ header {
             padding-top: 80px;
             top: 0;
             left: 100%;
-            background-color: $secondary-color;
+            background-color: $secondary_color;
             flex-direction: column;
             justify-content: flex-start;
             transform: translateX(0%);
