@@ -81,13 +81,13 @@ body.style.backgroundColor = `rgb(${0}, ${0}, ${0}, 0)`;
     tic1.volume = 1;
     let tic2 = new Audio("./audio/ticking/clock01-2.mp3");
     tic2.volume = 1;
-    let beepSound = new Audio("./audio/beep.mp3")
-    beepSound.volume = 0.3;
+    let alarmSound = new Audio("./audio/beep.mp3")
+    alarmSound.volume = 0.3;
 
     function alarm() {
-        beepSound.pause();
-        beepSound.load();
-        beepSound.play();
+        alarmSound.pause();
+        alarmSound.load();
+        alarmSound.play();
     }
 
     let today = new Date();
