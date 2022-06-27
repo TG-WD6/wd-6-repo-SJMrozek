@@ -1,7 +1,5 @@
 * {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-    font-size-adjust: 1em;
 }
 
 ul li, ol li{
@@ -13,3 +11,14 @@ a {
     text-decoration: none;
 }
 
+@media screen and (max-width: $smaller_screens) {
+    * {
+        font-size: 14px;
+    }
+    h3 {
+        font-size:larger;
+    }
+    input {
+        font-size: 1px;
+    }
+}
