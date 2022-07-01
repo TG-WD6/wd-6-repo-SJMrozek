@@ -517,7 +517,7 @@ header .menu .hamburger div:nth-of-type(3) {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 .footer .footer_container .link_box .social_links .social_icon {
   -webkit-user-select: none;
