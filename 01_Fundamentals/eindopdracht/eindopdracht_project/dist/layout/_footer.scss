@@ -1,61 +1,74 @@
 @import '../sass_utils/mixins', '../sass_utils/variables';
 
 .footer {
-    margin: auto;
+    display: flex;
+    margin-bottom: 70px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
-    .link_container {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+    width: 100%;
+    max-width: 1160px;
+    margin: auto;
+    
 
-    .link_box {
+
+    .footer_container {
         display: flex;
-        margin-inline: $box-margin;
-        margin-block: 20px;
-        flex-direction: column;
-        align-items: start;
-        width: 136.04px;
-        a {
-            color: $info_text_color;
-            &:hover {
-                text-decoration: underline;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+        margin: auto;
+        .link_box {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            min-width: 136.04px;
+            margin: $box-margin;
+            a {
+                color: $info_text_color;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .social_links {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .social_icon {
+                    user-select: none;
+                    height: 25px;
+                    width: 25px;
+                    margin: 5px;
+                    @include filter_blue;
+                }
             }
         }
-    }
-
-    .social_links {
-        display: flex;
-        flex-direction: row;
-        .social_icon {
-            height: 25px;
-            width: 25px;
-            @include filter_blue;
+        #service {
+            grid-area: service;
         }
-    }
-    .link_box:nth-of-type(4) {
-        width: auto;
+        #stores {
+            grid-area: stores;
+        }
+        #explore {
+            grid-area: explore;
+        }
+        #social {
+            grid-area: social;
+        }
     }
 }
 
 @media screen and (max-width: $small_screens) {
-    .footer .link_container {
-        justify-content: center;
+    .footer .footer_container {
+        // justify-content: center;
+        width: fit-content;
     }
-    .link_box {
-        margin-inline: auto;
-        a {
-            line-height: 25px;
-        }
+    .link_box a {
+        line-height: 25px;
     }
-    .link_box:nth-of-type(4) {
-        display: none;
+    #social {
+        align-items: center;
+        width: 100%;
     }
-    // .link_box:nth-of-type(5) {
-
-    // }
 }
