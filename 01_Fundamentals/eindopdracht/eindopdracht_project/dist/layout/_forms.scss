@@ -71,8 +71,14 @@
                 input {
                     cursor: pointer;
                 }
-                span:first-of-type {
+                span {
                     margin-right: 30px;
+                }
+                .forgot_password {
+                    color: $link_blue;
+                    &:active {
+                        color: #000;
+                    }
                 }
 
             }
@@ -82,11 +88,12 @@
                 width: 100%;
                 height: 50px;
                 background-color: $link_blue;
+                border: none;
                 color: white;
                 font-size: x-large;
                 font-weight: 600;
                 &:active{
-                    background-color: $link_blue_hover;
+                    background-color: $link_blue_active;
                 }
                 span {
                     display: flex;
