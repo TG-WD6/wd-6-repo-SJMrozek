@@ -1,36 +1,53 @@
 @import '../sass_utils/mixins', '../sass_utils/variables';
 
 .product_gallery {
-    margin: $box-margin;
+    display: flex;
+    margin: auto;
     justify-content: center;
     align-items: center;
+    margin: $box-margin;
     ul {
         .product_item {
-            width:auto;
+            width: auto;
         }
     }
 }
 .product_gallery ul li {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(100px, 0.5fr) 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "image text price";
+        gap: 0px 10px;
     padding-block: 10px;
     height: fit-content;
+    max-width: 1100px;
     justify-content: center;
     .product_image {
-        width: 165px;
+        grid-area: image;
         height: auto;
-        flex-shrink: 1;
         img {
+            cursor: pointer;
             width: 100%;
         }
     }
+    
     .product_info {
+        grid-area: text;
         display: flex;
         flex-direction: column;
         justify-content: start;
-        padding: 20px 10px;
-        flex-shrink: 2;
+        margin: auto;
         .brand, .product_name{
+            color: #000000;
             margin-bottom: 5px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .product_name {
+            font-weight: 600;
+            font-size: large;
         }
         .description {
             font-weight: 100;
@@ -38,26 +55,58 @@
         }
     }
     .purchase_info {
+        grid-area: price;
         display: flex;
         flex-direction: column;
-        flex-shrink: 0;
         width:fit-content;
         padding: 20px 10px;
-        .price span{
-            font-size: xx-large;
-            font-weight: 1000;
-            color: #f91906;
+        .price {
+            span {
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: xx-large;
+                font-weight: 700;
+                color: #f91906;
+            }
             sup {
-                font-size: medium;
+                position: relative;
+                top: 3.5px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size:21px;
+                font-weight: 700;
+                &::before {
+                    content: ",";
+                    font-size: xx-large;
+                    position: absolute;
+                    bottom: -10px;
+                }
             }
         }
         .delivery_info {
             color: #007000;
+            margin-bottom: 5px;
         }
         .purchase_button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 80px;
             height: 35px;
             background-color: #FEBD00;
+            .plus_icon {
+                margin-right: 5px;
+            }
         }
+        
+    }
+}
+
+@media screen and (max-width: $small_screens) {
+    .product_gallery ul li {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "image text"
+        "image price";
     }
 }

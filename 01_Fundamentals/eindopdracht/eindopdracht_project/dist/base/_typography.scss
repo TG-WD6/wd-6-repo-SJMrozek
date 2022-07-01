@@ -11,7 +11,7 @@ a {
     text-decoration: none;
 }
 
-@media screen and (max-width: $smaller_screens) {
+@media screen and (max-width: $small_screens) {
     * {
         font-size: 14px;
     }

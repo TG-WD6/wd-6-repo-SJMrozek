@@ -1,28 +1,25 @@
 @import '../sass_utils/mixins', '../sass_utils/variables';
 
 .footer {
-    margin: 15px;
-
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
     .link_container {
-        // display: grid;
-        // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        // grid-column-gap: 10px;
-        // grid-row-gap:30px;
-        
         display: flex;
         flex-direction: row;
         width: auto;
-        margin: 10px;
         justify-content: space-between;
         flex-wrap: wrap;
     }
 
     .link_box {
         display: flex;
-        // margin-inline: min(20px);
+        margin-inline: $box-margin;
         margin-block: 20px;
         flex-direction: column;
         align-items: start;
+        width: 136.04px;
         a {
             color: $info_text_color;
             &:hover {
@@ -40,12 +37,25 @@
             @include filter_blue;
         }
     }
+    .link_box:nth-of-type(4) {
+        width: auto;
+    }
 }
 
-// @media screen and (max-width: 620px) {
-//     .link_box:nth-last-of-type() {
-//         width: 500px;
-//         justify-content: center;
-//         align-items: center;
-//     }
-// }
+@media screen and (max-width: $small_screens) {
+    .footer .link_container {
+        justify-content: center;
+    }
+    .link_box {
+        margin-inline: auto;
+        a {
+            line-height: 25px;
+        }
+    }
+    .link_box:nth-of-type(4) {
+        display: none;
+    }
+    // .link_box:nth-of-type(5) {
+
+    // }
+}

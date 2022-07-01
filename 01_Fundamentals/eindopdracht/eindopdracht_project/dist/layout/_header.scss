@@ -91,7 +91,7 @@ header {
     }
 }
 
-@media screen and (max-width: $smaller_screens) {
+@media screen and (max-width: $small_screens) {
     header {
         height: 70px;
         display: flex;
