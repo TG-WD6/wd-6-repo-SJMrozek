@@ -1,0 +1,17 @@
+@import '../sass_utils/variables', '../sass_utils/mixins';
+
+#clockSection {
+    @include box-shadows;
+    position: relative;
+    top: 10vh;
+    width: 100vw;
+    height: fit-content;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
