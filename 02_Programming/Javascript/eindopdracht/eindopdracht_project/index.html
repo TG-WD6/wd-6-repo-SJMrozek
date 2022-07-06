@@ -7,6 +7,7 @@
     <title>JS Final</title>
     <link rel="stylesheet" href="style.css">
     <script src="clock.js" defer></script>
+    <script src="carousel.js" defer></script>
 </head>
 <body onload="runClock()">
     <header>
@@ -22,7 +23,9 @@
             </ul>
         </nav>
     </header>
+    <div class="spacer"></div>
     <section id="clockSection">
+        <h2>Clock</h2>
         <div class="clock">
             <div class="timeLine"></div>
             <div class="timeLine"></div>
@@ -41,10 +44,36 @@
             <div class="arrow" id="secArrow"></div>
             <div id="centerPiece"></div>
         </div>
+        
     </section>
-    <section id="jsonCardsSection"></section>
-    <section id="carouselSection"></section>
-    <section id="commentsSection"></section>
-    <section id="searchSection"></section>
+    
+
+    <section id="jsonCardsSection">
+        <h2>json Cards</h2>
+    </section>
+
+
+    <section id="carouselSection">
+        <h2>Carousel</h2>
+        <div class="carouselContainer">
+            <div class="carouselSlide">
+                <img src="./images/carousel/543034.jpg" id="lastClone" alt="">
+                <img src="./images/carousel/1940068.jpg" alt="">
+                <img src="./images/carousel/1940080.jpg" alt="">
+                <img src="./images/carousel/1940141.jpg" alt="">
+                <img src="./images/carousel/543034.jpg" alt="">
+                <img src="./images/carousel/1940068.jpg" id="firstClone" alt="">
+            </div>
+        </div>
+        <button id="prevButton">Prev</button>
+        <button id="nextButton">Next</button>
+    </section>
+    <section id="commentsSection">
+        <h2>Comments</h2>
+    </section>
+    
+    <section id="searchSection">
+        <h2>Search Bar</h2>
+    </section>
 </body>
 </html>

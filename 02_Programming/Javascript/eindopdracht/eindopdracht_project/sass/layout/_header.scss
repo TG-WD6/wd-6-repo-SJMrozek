@@ -1,25 +1,32 @@
 @import '../sass_utils/variables', '../sass_utils/mixins';
 
+.spacer {
+    top: 60px;
+    width: 100%;
+    height: 60px;
+}
+
 header {
-    z-index: 2;
-    @include box-shadows;
+    @include sectionShadow;
     position: fixed;
     width: 100%;
     height: 60px;
+    border-radius: 0 0 20px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-inline: 15vw;
     align-items: center;
-    background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat; 
+    background-color: rgb(189, 98, 63);
+    // background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat; 
     z-index: 2;
 
     h1 {
         span {
-            color: $tertiary-color;
+            color: $tertiaryColor;
         }
     }
 }
@@ -28,7 +35,7 @@ nav {
     span {
         cursor: default;
         font-size: xx-large;
-        color: $tertiary-color;
+        color: $tertiaryColor;
         &::before {
             
             content: "/";
@@ -38,19 +45,20 @@ nav {
         display:  none;
         position: absolute;
         width: 130px;
-        border-inline: 2px solid $tertiary-color;
+        border-inline: 2px solid $tertiaryColor;
         border-radius: 35px;
         list-style-type:none;
-        @include box-shadows;
+        @include sectionShadow;
         overflow: hidden;
 
         li {
             user-select: none;
             line-height: 2rem;
-            // border-radius: 5px;
+            border-radius: 5px;
+            margin: 5px;
             display: flex;
             justify-content: center;
-            background-color: $secondary-color;
+            background-color: $secondaryColor;
             transition: all 0.1s;
             box-shadow:
             inset -1px -3px 5px 0 $darken,
@@ -58,17 +66,17 @@ nav {
             &:hover {
                 line-height: 3rem;
                 font-size: large;
-                background-color: $primary-color;
+                background-color: $primaryColor;
                 &::before {
                     content: "./";
-                    color: $tertiary-color;
+                    color: $tertiaryColor;
                 }
             }
 
             a {
                 text-decoration: none;
                 &:active {
-                    color: $highlight-color;
+                    color: $highlightColor;
                 }
             }
         }

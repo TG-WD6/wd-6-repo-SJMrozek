@@ -1,8 +1,8 @@
-@mixin box-shadows {
+@mixin sectionShadow {
     box-shadow:
-    0 -10px 10px 0 $darken,
+    0 -5px 10px 0 $darken,
     inset 0 5px 5px 0 $brighten,
-    0 10px 10px 0 $darken,
-    inset 0 -5px 5px 0 $brighten;
+    0 10px 15px 0 $darken,
+    inset 0 -5px 5px 0 $darken;
     
 }
