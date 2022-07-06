@@ -1,0 +1,148 @@
+@import '../sass_utils/variables', '../sass_utils/mixins';
+
+#clockSection {
+    .clock {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondary-color;
+        background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+        overflow: hidden;
+        box-shadow:
+        inset 0px 0px 20px 5px rgb(0, 0, 0),
+        0px 0px 7px -1px $tertiary-color,
+        -2px -2px 3px -1px $darken,
+        -5px -5px 8px 0 $darken,
+        inset 0 0 0px 150px $darken,
+        0 0 1px 5px gray;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; 
+
+        .timeLine {
+            position: absolute;
+            width: 5px;
+            height: 20px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow:
+            0 4px 40px 10px $tertiary-color,
+            0 2px 10px 2px $tertiary-color,
+            inset 0 0 2px 1px $tertiary-color;
+            
+            &:nth-of-type(1) {
+                transform: rotate(30deg) translateY(-173px);
+            }
+            &:nth-of-type(2) {
+                transform: rotate(60deg) translateY(-173px);
+            }
+            &:nth-of-type(3) {
+                transform: rotate(90deg) translateY(-150px);
+            }
+            &:nth-of-type(4) {
+                transform: rotate(120deg) translateY(-173px);
+            }
+            &:nth-of-type(5) {
+                transform: rotate(150deg) translateY(-173px);
+            }
+            &:nth-of-type(6) {
+                transform: rotate(180deg) translateY(-150px);
+            }
+            &:nth-of-type(7) {
+                transform: rotate(210deg) translateY(-173px);
+            }
+            &:nth-of-type(8) {
+                transform: rotate(240deg) translateY(-173px);
+            }
+            &:nth-of-type(9) {
+                transform: rotate(270deg) translateY(-150px);
+            }
+            &:nth-of-type(10) {
+                transform: rotate(300deg) translateY(-173px);
+            }
+            &:nth-of-type(11) {
+                transform: rotate(330deg) translateY(-173px);
+            }
+            &:nth-of-type(12) {
+                transform: translateY(-150px);
+            }
+        }
+
+        #centerPiece {
+            user-select: none;
+            width: 80px;
+            height: 80px;
+            border-radius: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $darken;
+            font-weight:600;
+            background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+            background-size: 400%;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            box-shadow:
+            0px 0px 20px -5px black,
+            inset 0px 0px 20px -8px $tertiary-color,
+            inset 4px 3px 3px 0 $brighten,
+            inset 2px 2px 2px 0 $brighten,
+            inset -5px -5px 3px -2px $darken,
+            0 0 3px -2px #fff,
+            inset 0 0 1px 5px gray;
+            text-shadow:
+            -1px -1px 1px $brighten,
+            1px 1px 1px $darken;
+        }
+        .light {
+            font-size: xx-large;
+            filter: saturate(5) brightness(110%);
+            &::after {
+                content: "";
+            }
+        }
+        
+        #hrArrow, #minArrow, #secArrow {
+            position: absolute;
+            width: 4px;
+            border-radius: 3px;
+            background-color: #fff;
+            transform-origin: bottom;
+            transition-property: transform;
+            transition-timing-function: linear;
+        }
+
+        #hrArrow {
+            height: 100px;
+            top: 50px;
+            box-shadow:
+            0 0 3px 1px $tertiary-color,
+            0 0 15px 3px $tertiary-color,
+            inset 0 0 2px 0px $tertiary-color;
+        }
+        #minArrow {
+            height: 130px;
+            top: 20px;
+            box-shadow:
+            0 0 3px 1px $tertiary-color,
+            0 0 15px 3px $tertiary-color,
+            inset 0 0 2px 0px $tertiary-color;
+        }
+        #secArrow {
+            width: 3px;
+            height: 170px;
+            top: -20px;
+            border-radius: 20%;
+            background-color: transparent;
+            box-shadow:
+            0 30px 0px 1px crimson;
+        }
+    }
+}
