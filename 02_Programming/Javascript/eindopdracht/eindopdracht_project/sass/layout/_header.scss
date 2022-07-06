@@ -1,0 +1,81 @@
+@import '../sass_utils/variables', '../sass_utils/mixins';
+
+header {
+    z-index: 2;
+    @include box-shadows;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-inline: 15vw;
+    align-items: center;
+    background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat; 
+    z-index: 2;
+
+    h1 {
+        span {
+            color: $tertiary-color;
+        }
+    }
+}
+
+nav {
+    span {
+        cursor: default;
+        font-size: xx-large;
+        color: $tertiary-color;
+        &::before {
+            
+            content: "/";
+        }
+    }
+    .menu {
+        display:  none;
+        position: absolute;
+        width: 130px;
+        border-inline: 2px solid $tertiary-color;
+        border-radius: 35px;
+        list-style-type:none;
+        @include box-shadows;
+        overflow: hidden;
+
+        li {
+            user-select: none;
+            line-height: 2rem;
+            // border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            background-color: $secondary-color;
+            transition: all 0.1s;
+            box-shadow:
+            inset -1px -3px 5px 0 $darken,
+            inset 1px 3px 5px 0 $brighten;
+            &:hover {
+                line-height: 3rem;
+                font-size: large;
+                background-color: $primary-color;
+                &::before {
+                    content: "./";
+                    color: $tertiary-color;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                &:active {
+                    color: $highlight-color;
+                }
+            }
+        }
+    }
+
+
+    & span:hover ~ .menu, & .menu:hover {
+        display: block;
+    }
+}

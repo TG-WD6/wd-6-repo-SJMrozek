@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: monospace;
+  color: white;
+}
+
+body {
+  background-color: #0f0f0f;
+}
+
+header {
+  z-index: 2;
+  box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.568627451), inset 0 5px 5px 0 rgba(255, 255, 255, 0.1176470588), 0 10px 10px 0 rgba(0, 0, 0, 0.568627451), inset 0 -5px 5px 0 rgba(255, 255, 255, 0.1176470588);
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-inline: 15vw;
+  align-items: center;
+  background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+header h1 span {
+  color: rgb(178, 101, 230);
+}
+
+nav span {
+  cursor: default;
+  font-size: xx-large;
+  color: rgb(178, 101, 230);
+}
+nav span::before {
+  content: "/";
+}
+nav .menu {
+  display: none;
+  position: absolute;
+  width: 130px;
+  border-inline: 2px solid rgb(178, 101, 230);
+  border-radius: 35px;
+  list-style-type: none;
+  box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.568627451), inset 0 5px 5px 0 rgba(255, 255, 255, 0.1176470588), 0 10px 10px 0 rgba(0, 0, 0, 0.568627451), inset 0 -5px 5px 0 rgba(255, 255, 255, 0.1176470588);
+  overflow: hidden;
+}
+nav .menu li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  line-height: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #181818;
+  transition: all 0.1s;
+  box-shadow: inset -1px -3px 5px 0 rgba(0, 0, 0, 0.568627451), inset 1px 3px 5px 0 rgba(255, 255, 255, 0.1176470588);
+}
+nav .menu li:hover {
+  line-height: 3rem;
+  font-size: large;
+  background-color: #0f0f0f;
+}
+nav .menu li:hover::before {
+  content: "./";
+  color: rgb(178, 101, 230);
+}
+nav .menu li a {
+  text-decoration: none;
+}
+nav .menu li a:active {
+  color: #ffff00;
+}
+nav span:hover ~ .menu, nav .menu:hover {
+  display: block;
+}
+
+#clockSection {
+  box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.568627451), inset 0 5px 5px 0 rgba(255, 255, 255, 0.1176470588), 0 10px 10px 0 rgba(0, 0, 0, 0.568627451), inset 0 -5px 5px 0 rgba(255, 255, 255, 0.1176470588);
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#clockSection .clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+  background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+  overflow: hidden;
+  box-shadow: inset 0px 0px 20px 5px rgb(0, 0, 0), 0px 0px 7px -1px rgb(178, 101, 230), -2px -2px 3px -1px rgba(0, 0, 0, 0.568627451), -5px -5px 8px 0 rgba(0, 0, 0, 0.568627451), inset 0 0 0px 150px rgba(0, 0, 0, 0.568627451), 0 0 1px 5px gray;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#clockSection .clock .timeLine {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 4px 40px 10px rgb(178, 101, 230), 0 2px 10px 2px rgb(178, 101, 230), inset 0 0 2px 1px rgb(178, 101, 230);
+}
+#clockSection .clock .timeLine:nth-of-type(1) {
+  transform: rotate(30deg) translateY(-173px);
+}
+#clockSection .clock .timeLine:nth-of-type(2) {
+  transform: rotate(60deg) translateY(-173px);
+}
+#clockSection .clock .timeLine:nth-of-type(3) {
+  transform: rotate(90deg) translateY(-150px);
+}
+#clockSection .clock .timeLine:nth-of-type(4) {
+  transform: rotate(120deg) translateY(-173px);
+}
+#clockSection .clock .timeLine:nth-of-type(5) {
+  transform: rotate(150deg) translateY(-173px);
+}
+#clockSection .clock .timeLine:nth-of-type(6) {
+  transform: rotate(180deg) translateY(-150px);
+}
+#clockSection .clock .timeLine:nth-of-type(7) {
+  transform: rotate(210deg) translateY(-173px);
+}
+#clockSection .clock .timeLine:nth-of-type(8) {
+  transform: rotate(240deg) translateY(-173px);
+}
+#clockSection .clock .timeLine:nth-of-type(9) {
+  transform: rotate(270deg) translateY(-150px);
+}
+#clockSection .clock .timeLine:nth-of-type(10) {
+  transform: rotate(300deg) translateY(-173px);
+}
+#clockSection .clock .timeLine:nth-of-type(11) {
+  transform: rotate(330deg) translateY(-173px);
+}
+#clockSection .clock .timeLine:nth-of-type(12) {
+  transform: translateY(-150px);
+}
+#clockSection .clock #centerPiece {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.568627451);
+  font-weight: 600;
+  background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+  background-size: 400%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  box-shadow: 0px 0px 20px -5px black, inset 0px 0px 20px -8px rgb(178, 101, 230), inset 4px 3px 3px 0 rgba(255, 255, 255, 0.1176470588), inset 2px 2px 2px 0 rgba(255, 255, 255, 0.1176470588), inset -5px -5px 3px -2px rgba(0, 0, 0, 0.568627451), 0 0 3px -2px #fff, inset 0 0 1px 5px gray;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1176470588), 1px 1px 1px rgba(0, 0, 0, 0.568627451);
+}
+#clockSection .clock .light {
+  font-size: xx-large;
+  filter: saturate(5) brightness(110%);
+}
+#clockSection .clock .light::after {
+  content: "";
+}
+#clockSection .clock #hrArrow, #clockSection .clock #minArrow, #clockSection .clock #secArrow {
+  position: absolute;
+  width: 4px;
+  border-radius: 3px;
+  background-color: #fff;
+  transform-origin: bottom;
+  transition-property: transform;
+  transition-timing-function: linear;
+}
+#clockSection .clock #hrArrow {
+  height: 100px;
+  top: 50px;
+  box-shadow: 0 0 3px 1px rgb(178, 101, 230), 0 0 15px 3px rgb(178, 101, 230), inset 0 0 2px 0px rgb(178, 101, 230);
+}
+#clockSection .clock #minArrow {
+  height: 130px;
+  top: 20px;
+  box-shadow: 0 0 3px 1px rgb(178, 101, 230), 0 0 15px 3px rgb(178, 101, 230), inset 0 0 2px 0px rgb(178, 101, 230);
+}
+#clockSection .clock #secArrow {
+  width: 3px;
+  height: 170px;
+  top: -20px;
+  border-radius: 20%;
+  background-color: transparent;
+  box-shadow: 0 30px 0px 1px crimson;
+}
