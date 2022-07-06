@@ -1,24 +1,20 @@
 .button {
-  background-color: #345ee9;
-  color: #0c2079;
+  background-color: rgb(52, 94, 233);
+  color: rgb(12, 32, 121);
 }
-
 .button:hover {
-  background-color: #df4343;
+  background-color: rgb(223, 67, 67);
   color: orange;
 }
 
 .colorChangingSquare {
   width: 100px;
   height: 100px;
-  background-color: #345ee9;
-  color: #0c2079;
-  -webkit-transition: color 2s, background-color 2s;
+  background-color: rgb(52, 94, 233);
+  color: rgb(12, 32, 121);
   transition: color 2s, background-color 2s;
 }
-
 .colorChangingSquare:hover {
-  background-color: #df4343;
+  background-color: rgb(223, 67, 67);
   color: orange;
 }
-/*# sourceMappingURL=style.css.map */

@@ -1,21 +1,13 @@
 .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border: 0;
   width: 100px;
   height: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: pink;
   font-weight: 700;
 }
-
 .button:hover {
   background-color: violet;
 }
-/*# sourceMappingURL=style.css.map */
