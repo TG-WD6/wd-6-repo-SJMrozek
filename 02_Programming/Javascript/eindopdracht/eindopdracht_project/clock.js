@@ -1,7 +1,7 @@
-const display = document.getElementById("centerPiece");
 const hrArrow = document.getElementById("hrArrow");
 const minArrow = document.getElementById("minArrow");
 const secArrow = document.getElementById("secArrow");
+const display = document.getElementById("display");
 
 function runClock() {
     setTimeout(runClock, 1000)
@@ -17,16 +17,16 @@ function runClock() {
 
     
     // blink every hour
-    if (m == 15 && s < h) {
+    if (m == 0 && s < h) {
         blink();
     }
     
     function blink() {
         display.innerText = h;
-            display.classList.add("light")
+            display.classList.add("blink")
             setTimeout(() => {
                 display.innerText = null;
-                display.classList.remove("light")
+                display.classList.remove("blink")
             }, 500);
     }
 }

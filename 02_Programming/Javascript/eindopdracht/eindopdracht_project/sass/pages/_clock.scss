@@ -1,29 +1,21 @@
 @import '../sass_utils/variables', '../sass_utils/mixins';
 
 #clockSection {
-    margin-top: 0;
     .clock {
         position: relative;
         width: 300px;
         height: 300px;
         margin: auto;
+        margin-block: 10px;
         border-radius: 1em;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: none;
-        // background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+        background-color: $darken;
         overflow: hidden;
         box-shadow:
         inset 0px 0px 20px 5px $darken,
-        0px 0px 20px -8px $tertiaryColor,
-        -2px -2px 3px -1px $darken,
-        -5px -5px 8px 0 $darken,
-        inset 0 0 0px 150px $darken,
-        0 0 10px 10px black;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat; 
+        0 0 10px 5px $darken;
 
         .timeLine {
             position: absolute;
@@ -77,36 +69,41 @@
         }
 
         #centerPiece {
-            user-select: none;
-            width: 80px;
-            height: 80px;
-            border-radius: 1em;
+            width: 40px;
+            height: 40px;
+            border-radius: 16px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: $darken;
-            font-weight:600;
-            background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+            background-color: $primaryColor;
             background-size: 400%;
             background-position: center;
             background-repeat: no-repeat;
             z-index: 1;
             box-shadow:
-            0px 0px 20px -5px black,
-            inset 0px 0px 20px -12px $tertiaryColor,
-            inset 4px 3px 3px 0 $brighten,
-            inset 2px 2px 2px 0 $brighten,
-            inset -5px -5px 5px 0 $darken,
-            0 0 3px -2px #fff,
-            inset 0 0 5px 5px $darken;
-        }
-        .light {
-            font-size: xx-large;
-            filter: saturate(5) brightness(110%);
-            &::after {
-                content: "";
+            0px 0px 20px -5px $darken,
+            inset -5px -5px 4px 0 $darken,
+            inset 5px 5px 7px 0 #fff;
+
+            #display {
+                user-select: none;
+                font-size: x-large;
+                font-weight:600;
+                color: #fff;
+                text-shadow:
+                1px 1px 5px $tertiaryColor,
+                -1px 1px 5px $tertiaryColor,
+                -1px -1px 5px $tertiaryColor,
+                1px -1px 5px $tertiaryColor;
+            }
+            .blink {
+                font-size: x-large;
+                opacity: 0%;
+                transition: all 0.4s ease-in 0.1s;
             }
         }
+
+        
         
         #hrArrow, #minArrow, #secArrow {
             position: absolute;
@@ -141,7 +138,7 @@
             border-radius: 20%;
             background-color: transparent;
             box-shadow:
-            0 30px 0px 1px crimson;
+            0 30px 0px 2px rgb(116, 105, 93);
         }
     }
 }

@@ -5,27 +5,37 @@ const carouselImages = document.querySelectorAll(".carouselSlide img");
 const prevButton = document.querySelector("#prevButton");
 const nextButton = document.querySelector("#nextButton");
 
-//Counter
+// Counter
 let counter = 1;
-const size = carouselImages[0].width;
+let size = carouselImages[0].width;
 
-carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+// offset position by 1 image
+carouselSlide.style.transform = `translateX(${-size * counter}px)`
 
-//Button Listeners
+// fix position when resizing
+window.addEventListener("resize", function() {
+    size = carouselImages[0].width;
+    carouselSlide.style.transition = "none";
+    carouselSlide.style.transform = `translateX(${-size * counter}px)`
+    console.log("1")
+});
 
+//Slide functions
 nextButton.addEventListener("click", function() {
-    // if (counter <= 0) return;
+    if (counter >= carouselImages.length - 1) return;
     carouselSlide.style.transition = "transform 0.3s ease-in-out";
     counter++;
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`
+    carouselSlide.style.transform = `translateX(${-size * counter - 1}px)`
 })
 
 prevButton.addEventListener("click", function() {
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    if (counter <= 0) return;
+    carouselSlide.style.transition = "transform 0.3s ease-in-out";
     counter--;
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`
+    carouselSlide.style.transform = `translateX(${-size * counter - 1}px)`
 })
 
+//Reset Slide Position
 carouselSlide.addEventListener("transitionend", function() {
     if (carouselImages[counter].id === "lastClone") {
         carouselSlide.style.transition = "none";

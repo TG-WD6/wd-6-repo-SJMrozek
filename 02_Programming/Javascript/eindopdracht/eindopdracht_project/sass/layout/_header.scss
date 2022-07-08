@@ -1,9 +1,8 @@
 @import '../sass_utils/variables', '../sass_utils/mixins';
 
 .spacer {
-    top: 60px;
     width: 100%;
-    height: 60px;
+    height: 100px;
 }
 
 header {
@@ -13,15 +12,11 @@ header {
     height: 60px;
     border-radius: 0 0 20px 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     padding-inline: 15vw;
     align-items: center;
+    color: #fff;
     background-color: rgb(189, 98, 63);
-    // background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat; 
     z-index: 2;
 
     h1 {
@@ -36,6 +31,7 @@ nav {
         cursor: default;
         font-size: xx-large;
         color: $tertiaryColor;
+        
         &::before {
             
             content: "/";
@@ -44,18 +40,19 @@ nav {
     .menu {
         display:  none;
         position: absolute;
-        width: 130px;
+        width: 135px;
         border-inline: 2px solid $tertiaryColor;
-        border-radius: 35px;
+        border-radius: 1em;
         list-style-type:none;
+        background-color: $brighten;
         @include sectionShadow;
         overflow: hidden;
 
         li {
             user-select: none;
             line-height: 2rem;
-            border-radius: 5px;
-            margin: 5px;
+            border-radius: 0.5em;
+            margin: 5px 10px;
             display: flex;
             justify-content: center;
             background-color: $secondaryColor;
@@ -63,20 +60,23 @@ nav {
             box-shadow:
             inset -1px -3px 5px 0 $darken,
             inset 1px 3px 5px 0 $brighten;
+
             &:hover {
                 line-height: 3rem;
                 font-size: large;
-                background-color: $primaryColor;
+                box-shadow: inset 0 0 20px 5px $darken;
+
                 &::before {
                     content: "./";
-                    color: $tertiaryColor;
+                    color: rgb(189, 98, 63);
                 }
             }
 
             a {
                 text-decoration: none;
-                &:active {
-                    color: $highlightColor;
+                color: $textColor;
+                & :hover {
+                    color: $textActiveColor;
                 }
             }
         }

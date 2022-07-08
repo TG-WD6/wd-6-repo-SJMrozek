@@ -4,9 +4,8 @@
   box-sizing: border-box;
 }
 
-* {
+*, *::before, *::after {
   font-family: monospace;
-  color: #fff;
 }
 
 html {
@@ -14,37 +13,36 @@ html {
 }
 
 body {
-  background-color: beige;
+  background-color: #fff;
 }
 
 .spacer {
-  top: 60px;
   width: 100%;
-  height: 60px;
+  height: 100px;
 }
 
 header {
-  box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.3098039216), inset 0 5px 5px 0 rgba(255, 255, 255, 0.1176470588), 0 10px 15px 0 rgba(0, 0, 0, 0.3098039216), inset 0 -5px 5px 0 rgba(0, 0, 0, 0.3098039216);
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.274);
   position: fixed;
   width: 100%;
   height: 60px;
   border-radius: 0 0 20px 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   padding-inline: 15vw;
   align-items: center;
+  color: #fff;
   background-color: rgb(189, 98, 63);
   z-index: 2;
 }
 header h1 span {
-  color: rgb(233, 194, 122);
+  color: #e9c27a;
 }
 
 nav span {
   cursor: default;
   font-size: xx-large;
-  color: rgb(233, 194, 122);
+  color: #e9c27a;
 }
 nav span::before {
   content: "/";
@@ -52,11 +50,12 @@ nav span::before {
 nav .menu {
   display: none;
   position: absolute;
-  width: 130px;
-  border-inline: 2px solid rgb(233, 194, 122);
-  border-radius: 35px;
+  width: 135px;
+  border-inline: 2px solid #e9c27a;
+  border-radius: 1em;
   list-style-type: none;
-  box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.3098039216), inset 0 5px 5px 0 rgba(255, 255, 255, 0.1176470588), 0 10px 15px 0 rgba(0, 0, 0, 0.3098039216), inset 0 -5px 5px 0 rgba(0, 0, 0, 0.3098039216);
+  background-color: rgba(255, 255, 255, 0.2039215686);
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.274);
   overflow: hidden;
 }
 nav .menu li {
@@ -65,28 +64,29 @@ nav .menu li {
       -ms-user-select: none;
           user-select: none;
   line-height: 2rem;
-  border-radius: 5px;
-  margin: 5px;
+  border-radius: 0.5em;
+  margin: 5px 10px;
   display: flex;
   justify-content: center;
-  background-color: rgb(204, 197, 181);
+  background-color: #fff;
   transition: all 0.1s;
-  box-shadow: inset -1px -3px 5px 0 rgba(0, 0, 0, 0.3098039216), inset 1px 3px 5px 0 rgba(255, 255, 255, 0.1176470588);
+  box-shadow: inset -1px -3px 5px 0 rgba(0, 0, 0, 0.2274509804), inset 1px 3px 5px 0 rgba(255, 255, 255, 0.2039215686);
 }
 nav .menu li:hover {
   line-height: 3rem;
   font-size: large;
-  background-color: lightgray;
+  box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.2274509804);
 }
 nav .menu li:hover::before {
   content: "./";
-  color: rgb(233, 194, 122);
+  color: rgb(189, 98, 63);
 }
 nav .menu li a {
   text-decoration: none;
+  color: #464646;
 }
-nav .menu li a:active {
-  color: #ffff00;
+nav .menu li a :hover {
+  color: #727272;
 }
 nav span:hover ~ .menu, nav .menu:hover {
   display: block;
@@ -97,7 +97,7 @@ body {
 }
 
 section {
-  box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.3098039216), inset 0 5px 5px 0 rgba(255, 255, 255, 0.1176470588), 0 10px 15px 0 rgba(0, 0, 0, 0.3098039216), inset 0 -5px 5px 0 rgba(0, 0, 0, 0.3098039216);
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.274);
   position: relative;
   width: 80%;
   height: -webkit-fit-content;
@@ -109,11 +109,8 @@ section {
   justify-content: center;
   align-items: center;
   border-radius: 1em;
-  background-color: rgb(204, 197, 181);
-  background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  color: #464646;
+  background-color: #d3d3d3;
 }
 section h2 {
   width: 100%;
@@ -121,28 +118,23 @@ section h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-text-decoration: underline 0.2em rgb(233, 194, 122);
-          text-decoration: underline 0.2em rgb(233, 194, 122);
+  -webkit-text-decoration: underline 0.2em #e9c27a;
+          text-decoration: underline 0.2em #e9c27a;
 }
 
-#clockSection {
-  margin-top: 0;
-}
 #clockSection .clock {
   position: relative;
   width: 300px;
   height: 300px;
   margin: auto;
+  margin-block: 10px;
   border-radius: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0.2274509804);
   overflow: hidden;
-  box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.3098039216), 0px 0px 20px -8px rgb(233, 194, 122), -2px -2px 3px -1px rgba(0, 0, 0, 0.3098039216), -5px -5px 8px 0 rgba(0, 0, 0, 0.3098039216), inset 0 0 0px 150px rgba(0, 0, 0, 0.3098039216), 0 0 10px 10px black;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.2274509804), 0 0 10px 5px rgba(0, 0, 0, 0.2274509804);
 }
 #clockSection .clock .timeLine {
   position: absolute;
@@ -152,7 +144,7 @@ section h2 {
   display: flex;
   justify-content: center;
   background-color: #fff;
-  box-shadow: 0 4px 40px 10px rgb(233, 194, 122), 0 2px 10px 2px rgb(233, 194, 122), inset 0 0 2px 1px rgb(233, 194, 122);
+  box-shadow: 0 4px 40px 10px #e9c27a, 0 2px 10px 2px #e9c27a, inset 0 0 2px 1px #e9c27a;
 }
 #clockSection .clock .timeLine:nth-of-type(1) {
   transform: rotate(30deg) translateY(-173px);
@@ -191,31 +183,33 @@ section h2 {
   transform: translateY(-150px);
 }
 #clockSection .clock #centerPiece {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  width: 80px;
-  height: 80px;
-  border-radius: 1em;
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(0, 0, 0, 0.3098039216);
-  font-weight: 600;
-  background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
+  background-color: #d3d3d3;
   background-size: 400%;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
-  box-shadow: 0px 0px 20px -5px black, inset 0px 0px 20px -12px rgb(233, 194, 122), inset 4px 3px 3px 0 rgba(255, 255, 255, 0.1176470588), inset 2px 2px 2px 0 rgba(255, 255, 255, 0.1176470588), inset -5px -5px 5px 0 rgba(0, 0, 0, 0.3098039216), 0 0 3px -2px #fff, inset 0 0 5px 5px rgba(0, 0, 0, 0.3098039216);
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2274509804), inset -5px -5px 4px 0 rgba(0, 0, 0, 0.2274509804), inset 5px 5px 7px 0 #fff;
 }
-#clockSection .clock .light {
-  font-size: xx-large;
-  filter: saturate(5) brightness(110%);
+#clockSection .clock #centerPiece #display {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: x-large;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 5px #e9c27a, -1px 1px 5px #e9c27a, -1px -1px 5px #e9c27a, 1px -1px 5px #e9c27a;
 }
-#clockSection .clock .light::after {
-  content: "";
+#clockSection .clock #centerPiece .blink {
+  font-size: x-large;
+  opacity: 0%;
+  transition: all 0.4s ease-in 0.1s;
 }
 #clockSection .clock #hrArrow, #clockSection .clock #minArrow, #clockSection .clock #secArrow {
   position: absolute;
@@ -229,12 +223,12 @@ section h2 {
 #clockSection .clock #hrArrow {
   height: 100px;
   top: 50px;
-  box-shadow: 0 0 3px 1px rgb(233, 194, 122), 0 0 15px 3px rgb(233, 194, 122), inset 0 0 2px 0px rgb(233, 194, 122);
+  box-shadow: 0 0 3px 1px #e9c27a, 0 0 15px 3px #e9c27a, inset 0 0 2px 0px #e9c27a;
 }
 #clockSection .clock #minArrow {
   height: 130px;
   top: 20px;
-  box-shadow: 0 0 3px 1px rgb(233, 194, 122), 0 0 15px 3px rgb(233, 194, 122), inset 0 0 2px 0px rgb(233, 194, 122);
+  box-shadow: 0 0 3px 1px #e9c27a, 0 0 15px 3px #e9c27a, inset 0 0 2px 0px #e9c27a;
 }
 #clockSection .clock #secArrow {
   width: 3px;
@@ -242,14 +236,46 @@ section h2 {
   top: -20px;
   border-radius: 20%;
   background-color: transparent;
-  box-shadow: 0 30px 0px 1px crimson;
+  box-shadow: 0 30px 0px 2px rgb(116, 105, 93);
 }
 
+#carouselSection {
+  display: flex;
+  flex-direction: column;
+}
 #carouselSection .carouselContainer {
-  width: 80%;
-  margin: auto;
+  position: relative;
+  width: 60%;
+  margin-block: 10px;
   overflow: hidden;
   border-radius: 1em;
+  box-shadow: 0px 0px 20px -8px #e9c27a, -2px -2px 5px -3px rgba(0, 0, 0, 0.2274509804), -5px -5px 8px 0 rgba(0, 0, 0, 0.2274509804), 5px 5px 8px 0 #fff;
+}
+#carouselSection .carouselContainer button {
+  position: absolute;
+  width: 1em;
+  height: 100%;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.2039215686);
+  border: none;
+  font-size: xx-large;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.25);
+}
+#carouselSection .carouselContainer button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.35);
+}
+#carouselSection .carouselContainer #prevButton {
+  left: 0;
+  border-left: 3px solid #e9c27a;
+  border-radius: 1rem 0 0 1rem;
+}
+#carouselSection .carouselContainer #nextButton {
+  right: 0;
+  border-right: 3px solid #e9c27a;
+  border-radius: 0 1rem 1rem 0;
 }
 #carouselSection .carouselContainer .carouselSlide {
   display: flex;
@@ -258,4 +284,14 @@ section h2 {
 }
 #carouselSection .carouselContainer .carouselSlide img {
   width: 100%;
+}
+#carouselSection .source {
+  position: relative;
+  top: 10px;
+}
+#carouselSection .source, #carouselSection a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: rgba(0, 0, 0, 0.2274509804);
 }

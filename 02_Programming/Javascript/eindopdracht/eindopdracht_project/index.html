@@ -7,7 +7,8 @@
     <title>JS Final</title>
     <link rel="stylesheet" href="style.css">
     <script src="clock.js" defer></script>
-    <script src="carousel.js" defer></script>
+    <script src="carousel.js" async></script>
+    
 </head>
 <body onload="runClock()">
     <header>
@@ -42,33 +43,36 @@
             <div class="arrow" id="hrArrow"></div>
             <div class="arrow" id="minArrow"></div>
             <div class="arrow" id="secArrow"></div>
-            <div id="centerPiece"></div>
+            <div id="centerPiece"><span id="display"></span></div>
         </div>
-        
     </section>
     
 
     <section id="jsonCardsSection">
         <h2>json Cards</h2>
+        div.cardContainer
     </section>
 
 
     <section id="carouselSection">
         <h2>Carousel</h2>
         <div class="carouselContainer">
+            <button id="prevButton">&lt;</button>
+            <button id="nextButton">&gt;</button>
             <div class="carouselSlide">
-                <img src="./images/carousel/543034.jpg" id="lastClone" alt="">
-                <img src="./images/carousel/1940068.jpg" alt="">
-                <img src="./images/carousel/1940080.jpg" alt="">
-                <img src="./images/carousel/1940141.jpg" alt="">
-                <img src="./images/carousel/543034.jpg" alt="">
-                <img src="./images/carousel/1940068.jpg" id="firstClone" alt="">
+                <img src="./images/carousel/jeremy-bishop-BBxlKXVWysE-unsplash.jpg" id="lastClone" alt="">
+                <img src="./images/carousel/jeremy-bishop-cFvK2V6l9Tg-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-cDU4_fUpiXM-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-49FPkw0NuTA-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-ikXAvHU27Lo-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-38wGjnc_qGY-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-BBxlKXVWysE-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-cFvK2V6l9Tg-unsplash.jpg" id="firstClone" alt="">
             </div>
         </div>
-        <button id="prevButton">Prev</button>
-        <button id="nextButton">Next</button>
+        <span class="source">Photos by <a href="https://unsplash.com/@jeremybishop" target="_blank">Jeremy Bishop</a></span>
     </section>
-    <section id="commentsSection">
+    <section id="commentSection">
         <h2>Comments</h2>
     </section>
     

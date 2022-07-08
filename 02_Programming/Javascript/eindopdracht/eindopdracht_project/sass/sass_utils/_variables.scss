@@ -1,10 +1,12 @@
-$primaryColor: lightgray;
-$secondaryColor: rgb(204, 197, 181);
-$tertiaryColor: rgb(233, 194, 122);
-$borderColor: #4b4b4b;
+$primaryColor: #d3d3d3;
+$secondaryColor: #fff;
+$tertiaryColor: #e9c27a;
+$borderColor: violet;
 $highlightColor: #ffff00;
-$bgColor: beige;
-$textColor: #fff;
+$bgColor: $secondaryColor;
+$textColor: #464646;
+$textActiveColor:#727272;
+$headerColor: #fff;
 
-$brighten: #ffffff1e;
-$darken: #0000004f;
+$brighten: #ffffff34;
+$darken: #0000003a;

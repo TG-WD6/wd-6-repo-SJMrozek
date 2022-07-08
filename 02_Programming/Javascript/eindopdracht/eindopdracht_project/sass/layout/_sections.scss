@@ -13,12 +13,9 @@ section {
     justify-content: center;
     align-items: center;
     border-radius: 1em;
-    background-color: $secondaryColor;
-    background-image: url(./images/Hazy_black_ink_texture_with_brushstrokes.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    color: $textColor;
+    background-color: $primaryColor;
+    
     h2 {
         width: 100%;
         height: 80px;
