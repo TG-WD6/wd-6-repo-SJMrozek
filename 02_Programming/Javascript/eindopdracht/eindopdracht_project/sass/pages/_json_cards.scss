@@ -1,1 +1,234 @@
 @import '../sass_utils/variables', '../sass_utils/mixins';
+
+#jsonCardsSection {
+    display: flex;
+    flex-direction: column;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        #genSelect {
+            @include inlineBorders;
+            padding-inline: 20px;
+            // border-radius: 5px;
+            color: $textColor;
+            text-align: center;
+            display: flex;
+            &:active {
+                color: $textActiveColor;
+            }
+            &:focus-visible {
+                outline: 2px solid $tertiaryColor;
+            }
+            option {
+                &:hover {
+                    text-decoration: underline;
+                }
+                &:checked {
+                    background: #d3d3d3;
+                    color: $textActiveColor;
+                }
+            }
+        }
+    }
+
+    #cardContainer {
+        width: 90%;
+        height: fit-content;
+        margin: auto;
+        border: 3px dashed lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .pokemonCard {
+            user-select: none;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 10px;
+            border-radius: 1rem;
+            background-color: $secondaryColor;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow:
+            0 0 10px 0 $darken,
+            inset 0 0 10px 0 $darken;
+
+            .pokemonImage {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(240, 240, 240);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 
+                inset 0 0 10px 0 $darken;
+                img {
+                    -webkit-user-drag: none;
+                    user-select: none;
+                    width: 90%;
+                    height: auto;
+                }
+            }
+
+            .pokemonData {
+                @include inlineBorders;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                background-color: $secondaryColor;
+                box-shadow: 
+                inset 0 0 10px 0 $darken;
+                transition: opacity 0.1s;
+
+                &:hover {
+                    opacity: 100%;
+                }
+
+                .identity {
+                    position: relative;
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    margin-top: 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    #name {
+                        
+                    }
+                    #sprite {
+                        width: 40px;
+                        height: 40px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    #idNumber {
+                        &::before {
+                            content: "#";
+                        } 
+                    }
+                }
+
+                .typeList {
+                    width: 80%;
+                    margin: auto 5px;
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 5px;
+                    
+
+                    li {
+                        width: 35%;
+                        text-align: center;
+                        list-style-type: none;
+                        padding: 5px;
+                        border-radius: 0.5em;
+                        border: 1px solid $darken;
+                        color: #fff;
+                        box-shadow:
+                        0 0 5px 2px $darken,
+                        inset 0 0 5px -2px $brighten,
+                        inset 0 10px 7px -5px $brighten,
+                        inset 0 -10px 7px -5px $brighten;
+                        text-shadow:
+                        1px 0 2px $darken,
+                        0 1px 3px $darken,
+                        -1px 0 3px $darken,
+                        0 -1px 3px $darken;
+                    }
+                    .normal {
+                        background-color: #A8A77A;
+                    }
+                    .fighting {
+                        background-color: #C22E28;
+                    }
+                    .flying {
+                        background-color: #A98FF3;
+                    }
+                    .poison {
+                        background-color: #A33EA1;
+                    }
+                    .ground {
+                        background-color: #E2BF65;
+                    }
+                    .rock {
+                        background-color: #B6A136;
+                    }
+                    .bug {
+                        background-color: #A6B91A;
+                    }
+                    .ghost {
+                        background-color: #735797;
+                    }
+                    .steel {
+                        background-color: #B7B7CE;
+                    }
+                    .fire {
+                        background-color: #EE8130;
+                    }
+                    .water {
+                        background-color: #6390F0;
+                    }
+                    .grass {
+                        background-color: #7AC74C;
+                    }
+                    .electric {
+                        background-color: #F7D02C;
+                    }
+                    .psychic {
+                        background-color: #F95587;
+                    }
+                    .ice {
+                        background-color: #96D9D6;
+                    }
+                    .dragon {
+                        background-color: #6F35FC;
+                    }
+                    .dark {
+                        background-color: #705746;
+                    }
+                    .fairy {
+                        background-color: #D685AD;
+                    }
+                }
+
+                .specs {
+                    height: 70px;
+                    width:80%;
+                    margin: 20px;
+                    padding: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 5px 20px;
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        span:last-of-type {
+                            font-weight: 1000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

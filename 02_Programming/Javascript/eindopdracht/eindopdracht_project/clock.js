@@ -1,6 +1,6 @@
-const hrArrow = document.getElementById("hrArrow");
-const minArrow = document.getElementById("minArrow");
-const secArrow = document.getElementById("secArrow");
+const hrHand = document.getElementById("hrHand");
+const minHand = document.getElementById("minHand");
+const secHand = document.getElementById("secHand");
 const display = document.getElementById("display");
 
 function runClock() {
@@ -11,9 +11,9 @@ function runClock() {
     let m = date.getMinutes();
     let s = date.getSeconds();
 
-    hrArrow.style.transform = `rotate(${360 / 12 * h + 360 / 12 / 60 * m}deg)`;
-    minArrow.style.transform = `rotate(${360 / 60 * m + 360 / 60 /60 * s}deg)`;
-    secArrow.style.transform = `rotate(${360 / 60 * s}deg)`;
+    hrHand.style.transform = `rotate(${360 / 12 * h + 360 / 12 / 60 * m}deg)`;
+    minHand.style.transform = `rotate(${360 / 60 * m + 360 / 60 /60 * s}deg)`;
+    secHand.style.transform = `rotate(${360 / 60 * s}deg)`;
 
     
     // blink every hour
