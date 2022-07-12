@@ -38,7 +38,7 @@ function createBlankCard(amount) {
 }
 
 // Construct card for specific pokemon id
-const cardContainer = document.getElementById("cardContainer")
+const cardContainer = document.getElementById("cardContainer");
 
 function generateCard(id) {
     const pokemon = pokedex[id - 1];
@@ -67,7 +67,7 @@ function generateCard(id) {
 
     const typeList = document.createElement("ul");
     typeList.classList.add("typeList");
-    pokemon.type.forEach(type => createTypeTag(type))
+    pokemon.type.forEach(type => createTypeTag(type));
 
     function createTypeTag(type) {
         const typeItem = document.createElement("li");
@@ -139,7 +139,7 @@ function generateCard(id) {
     spAtk.append(spAtkText, spAtkValue);
     spDef.append(spDefText, spDefValue);
 
-    cardContainer.appendChild(pokeCard)
+    cardContainer.appendChild(pokeCard);
 }
 
 // Pokemon id's per generation (above gen 7 not provided in the pokedex.json)
@@ -180,25 +180,23 @@ const generation = {
 
 
 const generateBtn = document.getElementById("generateBtn");
-generateBtn.addEventListener("click", generatePokedex)
-console.log();
+generateBtn.addEventListener("click", generatePokedex);
 
 const clearBtn = document.getElementById("clearBtn");
-clearBtn.addEventListener("click", clearDex)
-clearBtn.classList.add("hide")
+clearBtn.addEventListener("click", clearDex);
+clearBtn.classList.add("hide");
 
-
+// Clear cardContainer
 function clearDex() {
     cardContainer.textContent = null;
-    clearBtn.classList.add("hide")
+    clearBtn.classList.add("hide");
 }
 
+// generate Cards
 function generatePokedex() {
     const genSelect = document.getElementById("genSelect").value;
     const typeSelect = document.getElementById("typeSelect").value;
-    console.log(genSelect, typeSelect);
-    console.log(pokedex[1].type);
-    clearBtn.classList.remove("hide")
+    clearBtn.classList.remove("hide");
     cardContainer.textContent = null;
 
     let firstPokemon = generation[genSelect].first;
@@ -206,9 +204,9 @@ function generatePokedex() {
 
     for (let i = firstPokemon; i <= LastPokemon; i++) {
         if (typeSelect === "all") {
-            generateCard(i)
+            generateCard(i);
         } else if (pokedex[i - 1].type.find(value => value === typeSelect)) {
-            generateCard(i)
+            generateCard(i);
         }
     }
 }
