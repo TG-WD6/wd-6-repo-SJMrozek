@@ -54,38 +54,58 @@
     <section id="jsonCardsSection">
         <h2>json Cards</h2>
         <form>
-            <select id="genSelect">
-                <option value="all generations">All generations</option>
-                <option value="Generation 1">Generation 1</option>
-                <option value="Generation 2">Generation 2</option>
-                <option value="Generation 3">Generation 3</option>
-                <option value="Generation 4">Generation 4</option>
-                <option value="Generation 5">Generation 5</option>
-                <option value="Generation 6">Generation 6</option>
-                <option value="Generation 7">Generation 7</option>
+            <select id="genSelect" name="genSelect">
+                <option value="all">All generations</option>
+                <option value="1">Generation 1</option>
+                <option value="2">Generation 2</option>
+                <option value="3">Generation 3</option>
+                <option value="4">Generation 4</option>
+                <option value="5">Generation 5</option>
+                <option value="6">Generation 6</option>
+                <option value="7">Generation 7</option>
+            </select>
+            <select id="typeSelect" name="typeSelect">
+                <option class="" value="all">All types</option>
+                <option class="normal" value="Normal">Normal</option>
+                <option class="fighting" value="Fighting">Fighting</option>
+                <option class="flying" value="Flying">Flying</option>
+                <option class="poison" value="Poison">Poison</option>
+                <option class="ground" value="Ground">Ground</option>
+                <option class="rock" value="Rock">Rock</option>
+                <option class="bug" value="Bug">Bug</option>
+                <option class="ghost" value="Ghost">Ghost</option>
+                <option class="steel" value="Steel">Steel</option>
+                <option class="fire" value="Fire">Fire</option>
+                <option class="water" value="Water">Water</option>
+                <option class="grass" value="Grass">Grass</option>
+                <option class="electric" value="Electric">Electric</option>
+                <option class="psychic" value="Psychic">Psychic</option>
+                <option class="ice" value="Ice">Ice</option>
+                <option class="dragon" value="Dragon">Dragon</option>
+                <option class="dark" value="Dark">Dark</option>
+                <option class="fairy" value="Fairy">Fairy</option>
             </select>
 
-            <button type="button">Generate Pokédex</button>
-            <br>
-            <span id="cardAmount">414</span>
-            <button type="reset" id="clearSearch">Clear table</button>
+            <button id="generateBtn" type="button">Generate Pokédex</button>
+            <span id="cardAmount"></span>
+            <button type="reset" id="clearBtn">Clear table</button>
         </form>
         <div id="cardContainer">
-            <div class="pokemonCard">
+            <!-- <div class="pokemonCard">
                 <div class="pokemonImage">
                     <img src="https://github.com/fanzeyi/pokemon.json/blob/master/images/063.png?raw=true" alt="#">
                 </div>
                 <div class="pokemonData">
                     <div class="identity">
-                        <span id="name">Abra</span>
-                        <span id="sprite"><img src="https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/sprites/063MS.png"></span>
-                        <span id="idNumber">063</span>
+                        <span class="name">Abra</span>
+                        <div class="sprite">
+                            <img src="https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/sprites/063MS.png">
+                        </div>
+                        <span class="idNumber">063</span>
                     </div>
 
                     <ul class="typeList">
                         <li class="psychic">Psychic</li>
-                        <li class="electric">Electric</li>
-                        <li class="fighting">Fighting</li>
                     </ul>
 
                     <div class="specs">
@@ -97,7 +117,7 @@
                         <div><span>SP.DEF:</span><span>50</span></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <span class="source">Pokémon data sourced from <a href="https://github.com/fanzeyi/pokemon.json" target="_blank">pokemon.json</a> by <a href="https://github.com/fanzeyi/pokemon.json" target="_blank">fanzeyi</a></span>
 

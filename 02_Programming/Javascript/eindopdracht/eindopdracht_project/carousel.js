@@ -17,7 +17,6 @@ window.addEventListener("resize", function() {
     size = carouselImages[0].width;
     carouselSlide.style.transition = "none";
     carouselSlide.style.transform = `translateX(${-size * counter}px)`
-    console.log("1")
 });
 
 //Slide functions
