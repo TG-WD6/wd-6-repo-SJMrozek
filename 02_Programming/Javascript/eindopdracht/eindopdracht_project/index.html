@@ -9,6 +9,7 @@
     <script src="clock.js" defer></script>
     <script src="carousel.js" async></script>
     <script type="module" src="pokedex.js" defer></script>
+    <script src="searchBar.js" defer></script>
     
 </head>
 <body onload="runClock()">
@@ -26,7 +27,6 @@
             </ul>
         </nav>
     </header>
-    <div class="spacer"></div>
 
     <section id="clockSection">
         <h2>Clock</h2>
@@ -50,7 +50,6 @@
         </div>
     </section>
     
-
     <section id="jsonCardsSection">
         <h2>json Cards</h2>
         <form>
@@ -123,7 +122,6 @@
 
     </section>
 
-
     <section id="carouselSection">
         <h2>Carousel</h2>
         <div class="carouselContainer">
@@ -143,12 +141,20 @@
         <span class="source">Photo by <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Jeremy Bishop</a> on <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
         </span>
     </section>
+    
+    <section id="searchSection">
+        <h2>Search Bar</h2>
+        <div id="searchWrapper">
+            <input id="searchBar" type="text" name="searchBar" placeholder="search for anything">
+            <ul id="suggestionList">
+
+            </ul>
+        </div>
+    </section>
+
     <section id="commentSection">
         <h2>Comments</h2>
     </section>
     
-    <section id="searchSection">
-        <h2>Search Bar</h2>
-    </section>
 </body>
 </html>

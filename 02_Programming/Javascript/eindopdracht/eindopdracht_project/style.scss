@@ -1,6 +1,5 @@
 @import './sass/sass_utils/variables';
 @import './sass/base/reset', './sass/base/typography', './sass/base/base';
+@import './sass/components/sourceText';
 @import './sass/layout/header', './sass/layout/sections';
-@import './sass/pages/clock', './sass/pages/json_cards', './sass/pages/carousel', './sass/pages/comments'
-
-
+@import './sass/sections/clock', './sass/sections/json_cards', './sass/sections/carousel', './sass/sections/comments', './sass/sections/search';

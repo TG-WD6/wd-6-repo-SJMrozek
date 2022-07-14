@@ -1,0 +1,70 @@
+@import '../sass_utils/variables', '../sass_utils/mixins';
+@import '../base/typography';
+
+#searchSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #searchWrapper {
+        position: absolute;
+        width: 250px;
+        height: fit-content;
+        top: 80px;
+        border-radius: 0.6rem;
+        border: 1px solid gray;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 2;
+        &::after {
+            content: "🔍";
+            font-family: NotoEmoji;
+            font-weight: 1000;
+            font-size: 1.5rem;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            padding: 2px;
+            right: 0px;
+            color: gray;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        #suggestionList {
+            position: relative;
+            width: 100%;
+            li {
+                cursor: default;
+                position:relative;
+                height: 30px;
+                padding-inline: 10px;
+                display: flex;
+                align-items: center;
+                &:hover {
+                    background-color: rgb(233, 233, 233);
+                }
+                &:active {
+                    background-color: rgb(233, 233, 233);
+                }
+            }
+        }
+
+        #searchBar {
+            height: 30px;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 40px;
+            border: none;
+            border-radius: 0.6rem;
+            background-color: transparent;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

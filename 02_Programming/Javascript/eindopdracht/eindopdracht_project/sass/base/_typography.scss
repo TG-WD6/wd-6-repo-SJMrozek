@@ -1,12 +1,5 @@
-*, *::before, *::after{
-    font-family: monospace;
-}
+@font-face { font-family: NotoEmoji; src: url('fonts/NotoEmoji-VariableFont_wght.ttf')}
 
-.source {
-    position: relative;
-    top: 20px;
-}
-.source, a {
-    width: max-content;
-    color: $darken;
+*, *::before, *::after{
+font-family: monospace;
 }
