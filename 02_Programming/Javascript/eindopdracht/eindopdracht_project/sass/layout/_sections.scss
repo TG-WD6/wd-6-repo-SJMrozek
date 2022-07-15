@@ -1,0 +1,27 @@
+@import '../sass_utils/variables', '../sass_utils/mixins';
+body {
+    perspective: 100px;
+}
+section {
+    @include sectionShadow;
+    position: relative;
+    width: 80%;
+    height: fit-content;
+    margin-block: 60px;
+    margin-inline: auto;
+    padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    color: $textColor;
+    background-color: $primaryColor;
+    
+    h2 {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline 0.2em $tertiaryColor;
+    }
+}

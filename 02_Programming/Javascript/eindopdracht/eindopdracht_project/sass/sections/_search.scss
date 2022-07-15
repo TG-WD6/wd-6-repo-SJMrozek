@@ -1,0 +1,125 @@
+@import '../sass_utils/variables', '../sass_utils/mixins';
+@import '../base/typography';
+
+#searchSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #searchBar {
+        position: relative;
+        width: 250px;
+        height: 33px;
+        display: flex;
+        #searchWrapper {
+            position: absolute;
+            width: 100%;
+            height: fit-content;
+            border-radius: 0.6rem;
+            border: 1px solid gray;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 1;
+            overflow: hidden;
+
+            #search {
+                width: 100%;
+                display: flex;
+                #searchInput {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1rem;
+                    display: inline;
+                    height: 30px;
+                    width: 100%;
+                    padding-left: 10px;
+                    padding-right: 40px;
+                    border: none;
+                    background-color: transparent;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                #searchButton {
+                    width: 30px;
+                    height: 30px;
+                    border: none;
+                    color: gray;
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    cursor: pointer;
+                    user-select: none;
+                    &::after {
+                        content: "🔍";
+                        font-family: NotoEmoji;
+                        font-weight: 1000;
+                        font-size: 1.5rem;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            #suggestionList {
+                position: relative;
+                width: 100%;
+                border-top: thin solid lightgray;
+                .suggestion {
+                    cursor: default;
+                    position:relative;
+                    display: flex;
+                    align-items: center;
+                    &:hover {
+                        background-color: rgb(233, 233, 233);
+                        .deleteButton::after {
+                            opacity: 100%;
+                        }
+                    }
+                    &:active {
+                        background-color: rgb(233, 233, 233);
+                    }
+                    
+                    span {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1rem;
+                        word-wrap: break-word;
+                        color: $textColor;
+                        width: 220px;
+                        padding-left: 10px;
+                        padding-block: 5px;
+                    }
+
+                    .deleteButton {
+                        cursor: pointer;
+                        position: relative;
+                        right: 0;
+                        width: 20px;
+                        height: 100%;
+                        margin: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 2;
+                        &::after {
+                            content:"❌";
+                            font-family: NotoEmoji;
+                            color: rgb(167, 167, 167);
+                            font-size: 0.6rem;
+                            opacity: 0;
+                            &:hover {
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

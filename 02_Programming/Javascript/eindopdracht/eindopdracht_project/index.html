@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Final</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="clock.js" defer></script>
+    <script src="carousel.js" async></script>
+    <script type="module" src="pokedex.js" defer></script>
+    <script src="searchBar.js" defer></script>
+    
+</head>
+<body onload="runClock()">
+
+    <header>
+        <h1>javascript<span>_</span>final</h1>
+        <nav>
+            <span>sections</span>
+            <ul class="menu">
+                <li><a href="#clockSection">clock</a></li>
+                <li><a href="#jsonCardsSection">json_cards</a></li>
+                <li><a href="#carouselSection">carousel</a></li>
+                <li><a href="#commentSection">comments</a></li>
+                <li><a href="#searchSection">search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="clockSection">
+        <h2>Clock</h2>
+        <div class="clock">
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hour"></div>
+            <div class="hand" id="hrHand"></div>
+            <div class="hand" id="minHand"></div>
+            <div class="hand" id="secHand"></div>
+            <div id="centerPiece"><span id="display"></span></div>
+        </div>
+    </section>
+    
+    <section id="jsonCardsSection">
+        <h2>json Cards</h2>
+        <form>
+            <select id="genSelect" name="genSelect">
+                <option value="all">All generations</option>
+                <option value="1">Generation 1</option>
+                <option value="2">Generation 2</option>
+                <option value="3">Generation 3</option>
+                <option value="4">Generation 4</option>
+                <option value="5">Generation 5</option>
+                <option value="6">Generation 6</option>
+                <option value="7">Generation 7</option>
+            </select>
+            <select id="typeSelect" name="typeSelect">
+                <option class="" value="all">All types</option>
+                <option class="normal" value="Normal">Normal</option>
+                <option class="fighting" value="Fighting">Fighting</option>
+                <option class="flying" value="Flying">Flying</option>
+                <option class="poison" value="Poison">Poison</option>
+                <option class="ground" value="Ground">Ground</option>
+                <option class="rock" value="Rock">Rock</option>
+                <option class="bug" value="Bug">Bug</option>
+                <option class="ghost" value="Ghost">Ghost</option>
+                <option class="steel" value="Steel">Steel</option>
+                <option class="fire" value="Fire">Fire</option>
+                <option class="water" value="Water">Water</option>
+                <option class="grass" value="Grass">Grass</option>
+                <option class="electric" value="Electric">Electric</option>
+                <option class="psychic" value="Psychic">Psychic</option>
+                <option class="ice" value="Ice">Ice</option>
+                <option class="dragon" value="Dragon">Dragon</option>
+                <option class="dark" value="Dark">Dark</option>
+                <option class="fairy" value="Fairy">Fairy</option>
+            </select>
+
+            <button id="generateBtn" type="button">Generate Pokédex</button>
+            <span id="cardAmount"></span>
+            <button type="reset" id="clearBtn">Clear table</button>
+        </form>
+        <div id="cardContainer">
+        </div>
+        <span class="source">Pokémon data sourced from <a href="https://github.com/fanzeyi/pokemon.json" target="_blank">pokemon.json</a> by <a href="https://github.com/fanzeyi/pokemon.json" target="_blank">fanzeyi</a></span>
+
+    </section>
+
+    <section id="carouselSection">
+        <h2>Carousel</h2>
+        <div class="carouselContainer">
+            <button id="prevButton">&lt;</button>
+            <button id="nextButton">&gt;</button>
+            <div class="carouselSlide">
+                <img src="./images/carousel/jeremy-bishop-BBxlKXVWysE-unsplash.jpg" id="lastClone" alt="">
+                <img src="./images/carousel/jeremy-bishop-cFvK2V6l9Tg-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-cDU4_fUpiXM-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-49FPkw0NuTA-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-ikXAvHU27Lo-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-38wGjnc_qGY-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-BBxlKXVWysE-unsplash.jpg" alt="">
+                <img src="./images/carousel/jeremy-bishop-cFvK2V6l9Tg-unsplash.jpg" id="firstClone" alt="">
+            </div>
+        </div>
+        <span class="source">Photo by <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Jeremy Bishop</a> on <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+        </span>
+    </section>
+    
+    <section id="searchSection">
+        <h2>Search Bar</h2>
+        <div id="searchBar">
+            <div id="searchWrapper" >
+                <div id="search">
+                    <input id="searchInput" type="text" name="search" autocomplete="off" placeholder="search for anything">
+                    <button id="searchButton" type="button"></button>
+                </div>
+                <ul id="suggestionList">
+                </ul>
+            </div>
+        </div>
+        <span></span>
+    </section>
+
+    <section id="commentsSection">
+        <h2>Comments</h2>
+    </section>
+    
+</body>
+</html>

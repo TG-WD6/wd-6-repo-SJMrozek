@@ -1,0 +1,85 @@
+@import '../sass_utils/variables', '../sass_utils/mixins';
+
+header {
+    @include sectionShadow;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: center;
+    padding-inline: 15vw;
+    align-items: center;
+    color: #fff;
+    background-color: rgb(189, 98, 63);
+    z-index: 2;
+
+    h1 {
+        span {
+            color: $tertiaryColor;
+        }
+    }
+}
+
+nav {
+    span {
+        cursor: default;
+        font-size: xx-large;
+        color: $tertiaryColor;
+        
+        &::before {
+            
+            content: "/";
+        }
+    }
+    .menu {
+        display:  none;
+        position: absolute;
+        width: 135px;
+        border-inline: 2px solid $tertiaryColor;
+        border-radius: 1em;
+        list-style-type:none;
+        background-color: $brighten;
+        @include sectionShadow;
+        overflow: hidden;
+
+        li {
+            user-select: none;
+            line-height: 2rem;
+            border-radius: 0.5em;
+            margin: 5px 10px;
+            display: flex;
+            justify-content: center;
+            background-color: $secondaryColor;
+            transition: all 0.1s;
+            box-shadow:
+            inset -1px -3px 5px 0 $darken,
+            inset 1px 3px 5px 0 $brighten;
+
+            &:hover {
+                line-height: 3rem;
+                font-size: large;
+                box-shadow: inset 0 0 20px 5px $darken;
+
+                &::before {
+                    content: "./";
+                    color: rgb(189, 98, 63);
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $textColor;
+                & :hover {
+                    color: $textActiveColor;
+                }
+            }
+        }
+    }
+
+
+    & span:hover ~ .menu, & .menu:hover {
+        display: block;
+    }
+}
