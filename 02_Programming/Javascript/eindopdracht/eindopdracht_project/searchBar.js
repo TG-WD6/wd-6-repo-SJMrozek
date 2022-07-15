@@ -1,98 +1,100 @@
-const searchBar = document.getElementById("searchBar");
+const searchWrapper = document.querySelector("#searchWrapper");
+const searchInput = document.querySelector("#searchInput");
+const searchButton = document.querySelector("#searchButton");
+const suggestionList = document.querySelector("#suggestionList")
+let input = searchInput.value;
+
 let searchHistory = [];
-let storedHistory = JSON.parse(localStorage.getItem("searchHistory"));
 
-
-// localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-
-searchBar.addEventListener('input', (event) => getFunction(event));
-searchBar.addEventListener('keydown', (event) => getFunction(event));
-
-function getFunction(event) {
-    console.log("searchhistory", searchHistory);
-    console.log("storedHistory", storedHistory);
-    switch (event.key) {
-        case "ArrowUp":
-        case "ArrowDown":
-
-            break;
-        case "ArrowLeft":
-        case "ArrowRight":
-            break;
-        default:
-            getSuggestions(event)
-            break;
-    }
+//check if local storage already contains searchHistory
+if (localStorage.getItem("searchHistory") === null) {
+    searchHistory = localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+} else { 
+    searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
 }
 
-function processInput(content) {
-    console.clear()
-    // guard class for blank input content (spaces are trimmed)
-    if (content.length === 0) return;
-    
-    // push input content to searchHistory and localstorage if it's not already in the searchHistory array.
-    if (!searchHistory.find(item => item == content)) {
-    searchHistory.push(content);
-    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-    storedHistory = JSON.parse(localStorage.getItem("searchHistory"));
-    searchBar.value = content;
-
-    console.log("SAVED:", storedHistory)
+// When typing
+searchInput.addEventListener("input", () => {
+    input = searchInput.value.replace(/\s+/g,' ').trim().toLowerCase();
+    if (input.length !== 0) {
+        getSuggestions();
     } else {
-        console.error("'" + content + "'", "already saved");
+        clearDOMList();
     }
-}
+});
+
+// When pressed 'Enter' or clicked search button
+searchButton.addEventListener("click", () => confirmSearch())
+searchInput.addEventListener("keydown", function(event) {
+    if (event.key == "Enter") {
+        confirmSearch()
+    }
+});
 
 
+// FUNCTIONS
+function getSuggestions() {
+    clearDOMList();
+    let counter = 0;
+    searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
 
-function getSuggestions(event) {
-    // Used regex to remove unnessecary spaces
-    let input = searchBar.value.replace(/\s+/g,' ').trim().toLowerCase();
-    let storedHistory = JSON.parse(localStorage.getItem("searchHistory"));
-    let suggestions = [];
-
-    storedHistory.forEach(string => {
-        if (input.length !== 0 && string.includes(input)) {
-            suggestions.push(string);
-            showSuggestion(suggestions)
-        } else {
-            suggestions = [];
-            clearSuggestions();
-            console.clear();
-            console.warn("search for anything", storedHistory);
-            console.warn(input);
+    searchHistory.forEach(item => {
+        //display only 5 suggestions
+        if (counter < 5 && item.includes(input) && item !== input) {
+            createDOMItem(item);
+            counter++;
         }
     });
-    // Confirm input
-    if (event.key === "Enter") {
-        setSuggestion(input);
-    }
 }
 
-
-
-function showSuggestion(array) {
-    clearSuggestions();
-    
-    console.clear();
-    console.warn("\nSUGGESTIONS:");
-    array.forEach((string) => {
-        let listItem = document.createElement("li");
-            listItem.classList.add("suggestion")
-            listItem.innerText = string;
-        
-            suggestionList.appendChild(listItem)
-    });
+function confirmSearch() {
+    setSearchHistory();
+    clearDOMList();
+    searchInput.value = "";
 }
 
+function setSearchHistory() {
+    if (input.length > 0 && !searchHistory.some(item => item === input)) {
+        searchHistory.unshift(input);
+        localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+    } 
+}
 
+function createDOMItem(string) {
+    let text = document.createElement("span");
+    text.setAttribute("onclick", "setInput(this.parentElement)")
+    text.innerText = string;
+    let button = document.createElement("div");
+    button.setAttribute("onclick", "deleteSuggestion(this)");
+    button.classList.add("deleteButton");
+    let suggestion = document.createElement("li");
+    suggestion.classList.add("suggestion");
+    suggestion.append(text, button);
+    suggestionList.appendChild(suggestion);
+}
 
-let suggestionList = document.getElementById("suggestionList");
-
-function clearSuggestions() {
+function clearDOMList() {
     let child = suggestionList.firstElementChild; 
     while (child) {
         suggestionList.removeChild(child);
         child = suggestionList.firstElementChild;
-    }
+    }   
 }
+
+function setInput(element) {
+    input = element.firstElementChild.innerText;
+    searchInput.value = input;
+    clearDOMList();
+}
+
+function deleteSuggestion(element) {
+    let content = element.parentElement.firstElementChild.innerText
+    element.parentElement.remove();
+
+    let index = searchHistory.indexOf(content);
+    searchHistory.splice(index, 1);
+    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+    getSuggestions();
+}
+
+

@@ -557,32 +557,51 @@ section h2 {
   flex-direction: column;
   align-items: center;
 }
-#searchSection #searchWrapper {
-  position: absolute;
+#searchSection #searchBar {
+  position: relative;
   width: 250px;
+  height: 33px;
+  display: flex;
+}
+#searchSection #searchBar #searchWrapper {
+  position: absolute;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  top: 80px;
   border-radius: 0.6rem;
   border: 1px solid gray;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  z-index: 2;
+  z-index: 1;
+  overflow: hidden;
 }
-#searchSection #searchWrapper::after {
-  content: "🔍";
-  font-family: NotoEmoji;
-  font-weight: 1000;
-  font-size: 1.5rem;
-  position: absolute;
+#searchSection #searchBar #searchWrapper #search {
+  width: 100%;
+  display: flex;
+}
+#searchSection #searchBar #searchWrapper #search #searchInput {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: inline;
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 40px;
+  border: none;
+  background-color: transparent;
+}
+#searchSection #searchBar #searchWrapper #search #searchInput:focus {
+  outline: none;
+}
+#searchSection #searchBar #searchWrapper #search #searchButton {
   width: 30px;
   height: 30px;
-  padding: 2px;
-  right: 0px;
+  border: none;
   color: gray;
+  background-color: transparent;
   display: flex;
   align-items: center;
   text-align: center;
@@ -592,33 +611,65 @@ section h2 {
       -ms-user-select: none;
           user-select: none;
 }
-#searchSection #searchWrapper #suggestionList {
+#searchSection #searchBar #searchWrapper #search #searchButton::after {
+  content: "🔍";
+  font-family: NotoEmoji;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#searchSection #searchBar #searchWrapper #suggestionList {
   position: relative;
   width: 100%;
+  border-top: thin solid lightgray;
 }
-#searchSection #searchWrapper #suggestionList li {
+#searchSection #searchBar #searchWrapper #suggestionList .suggestion {
   cursor: default;
   position: relative;
-  height: 30px;
-  padding-inline: 10px;
   display: flex;
   align-items: center;
 }
-#searchSection #searchWrapper #suggestionList li:hover {
+#searchSection #searchBar #searchWrapper #suggestionList .suggestion:hover {
   background-color: rgb(233, 233, 233);
 }
-#searchSection #searchWrapper #suggestionList li:active {
+#searchSection #searchBar #searchWrapper #suggestionList .suggestion:hover .deleteButton::after {
+  opacity: 100%;
+}
+#searchSection #searchBar #searchWrapper #suggestionList .suggestion:active {
   background-color: rgb(233, 233, 233);
 }
-#searchSection #searchWrapper #searchBar {
-  height: 30px;
-  width: 100%;
+#searchSection #searchBar #searchWrapper #suggestionList .suggestion span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  word-wrap: break-word;
+  color: #464646;
+  width: 220px;
   padding-left: 10px;
-  padding-right: 40px;
-  border: none;
-  border-radius: 0.6rem;
-  background-color: transparent;
+  padding-block: 5px;
 }
-#searchSection #searchWrapper #searchBar:focus {
-  outline: none;
+#searchSection #searchBar #searchWrapper #suggestionList .suggestion .deleteButton {
+  cursor: pointer;
+  position: relative;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+#searchSection #searchBar #searchWrapper #suggestionList .suggestion .deleteButton::after {
+  content: "❌";
+  font-family: NotoEmoji;
+  color: rgb(167, 167, 167);
+  font-size: 0.6rem;
+  opacity: 0;
+}
+#searchSection #searchBar #searchWrapper #suggestionList .suggestion .deleteButton::after:hover {
+  color: red;
 }

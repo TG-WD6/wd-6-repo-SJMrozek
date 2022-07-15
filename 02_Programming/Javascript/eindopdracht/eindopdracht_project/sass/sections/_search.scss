@@ -6,64 +6,119 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    #searchWrapper {
-        position: absolute;
+    #searchBar {
+        position: relative;
         width: 250px;
-        height: fit-content;
-        top: 80px;
-        border-radius: 0.6rem;
-        border: 1px solid gray;
-        background-color: #fff;
+        height: 33px;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        z-index: 2;
-        &::after {
-            content: "🔍";
-            font-family: NotoEmoji;
-            font-weight: 1000;
-            font-size: 1.5rem;
+        #searchWrapper {
             position: absolute;
-            width: 30px;
-            height: 30px;
-            padding: 2px;
-            right: 0px;
-            color: gray;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            cursor: pointer;
-            user-select: none;
-        }
-        #suggestionList {
-            position: relative;
             width: 100%;
-            li {
-                cursor: default;
-                position:relative;
-                height: 30px;
-                padding-inline: 10px;
+            height: fit-content;
+            border-radius: 0.6rem;
+            border: 1px solid gray;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 1;
+            overflow: hidden;
+
+            #search {
+                width: 100%;
                 display: flex;
-                align-items: center;
-                &:hover {
-                    background-color: rgb(233, 233, 233);
+                #searchInput {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1rem;
+                    display: inline;
+                    height: 30px;
+                    width: 100%;
+                    padding-left: 10px;
+                    padding-right: 40px;
+                    border: none;
+                    background-color: transparent;
+                    &:focus {
+                        outline: none;
+                    }
                 }
-                &:active {
-                    background-color: rgb(233, 233, 233);
+
+                #searchButton {
+                    width: 30px;
+                    height: 30px;
+                    border: none;
+                    color: gray;
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    cursor: pointer;
+                    user-select: none;
+                    &::after {
+                        content: "🔍";
+                        font-family: NotoEmoji;
+                        font-weight: 1000;
+                        font-size: 1.5rem;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
-        }
 
-        #searchBar {
-            height: 30px;
-            width: 100%;
-            padding-left: 10px;
-            padding-right: 40px;
-            border: none;
-            border-radius: 0.6rem;
-            background-color: transparent;
-            &:focus {
-                outline: none;
+            #suggestionList {
+                position: relative;
+                width: 100%;
+                border-top: thin solid lightgray;
+                .suggestion {
+                    cursor: default;
+                    position:relative;
+                    display: flex;
+                    align-items: center;
+                    &:hover {
+                        background-color: rgb(233, 233, 233);
+                        .deleteButton::after {
+                            opacity: 100%;
+                        }
+                    }
+                    &:active {
+                        background-color: rgb(233, 233, 233);
+                    }
+                    
+                    span {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1rem;
+                        word-wrap: break-word;
+                        color: $textColor;
+                        width: 220px;
+                        padding-left: 10px;
+                        padding-block: 5px;
+                    }
+
+                    .deleteButton {
+                        cursor: pointer;
+                        position: relative;
+                        right: 0;
+                        width: 20px;
+                        height: 100%;
+                        margin: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 2;
+                        &::after {
+                            content:"❌";
+                            font-family: NotoEmoji;
+                            color: rgb(167, 167, 167);
+                            font-size: 0.6rem;
+                            opacity: 0;
+                            &:hover {
+                                color: red;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
