@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  margin: 0;
+  height: 100vh;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size-adjust: 1em;
+}
+
+ul li, ol li {
+  list-style-type: none;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.spacer {
+  height: 80px;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+header .logo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60%;
+  width: auto;
+  margin-left: 20px;
+  z-index: 2;
+}
+
+header li, header li a {
+  color: #fff;
+}
+
+header li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header li a .icon {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  -webkit-filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(324deg) brightness(114%) contrast(101%);
+          filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(324deg) brightness(114%) contrast(101%);
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 30px;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .menu ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header .menu ul li {
+  margin: 15px;
+  color: #fff;
+}
+
+header .menu .menu_toggler {
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .menu .hamburger {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+  display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .menu .hamburger div {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: white;
+  display: block;
+}
+
+@media screen and (max-width: 620px) {
+  header header {
+    height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header header .logo {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    z-index: 2;
+  }
+  header .menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header .menu .menu_toggler {
+    z-index: 2;
+    display: block;
+    opacity: 0;
+  }
+  header .menu .hamburger {
+    display: block;
+  }
+  header .menu ul {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    padding-top: 70px;
+    top: 0;
+    left: 100vw;
+    background-color: #2f125f;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+  }
+  header .menu li {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    -webkit-transition-delay: .3s;
+            transition-delay: .3s;
+  }
+}
+
+header .menu_toggler:checked ~ ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+header .menu_toggler:checked ~ ul li {
+  -webkit-transform: translateX(0vw);
+          transform: translateX(0vw);
+  -webkit-transition-delay: .5;
+          transition-delay: .5;
+}
+
+header .menu_toggler:checked ~ ul li:nth-of-type(1) {
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+header .menu_toggler:checked ~ ul li:nth-of-type(2) {
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+header .menu_toggler:checked ~ ul li:nth-of-type(3) {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.login_box {
+  max-width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 20px #0000003f;
+          box-shadow: 0px 0px 20px #0000003f;
+}
+
+.login_box .profile_picture {
+  max-width: 62.5%;
+  max-height: auto;
+  margin: 0 auto;
+  border-radius: 10%;
+}
+
+.login_box h2 {
+  margin: 5px;
+}
+
+.login_box p {
+  margin: 10px;
+}
+
+.login_box form fieldset {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 30px;
+  border: none;
+}
+
+.login_box form fieldset input[name=email], .login_box form fieldset input[name=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  border-width: 0 0 1px 0;
+}
+
+.login_box form fieldset input[name=email]:focus, .login_box form fieldset input[name=password]:focus {
+  outline: none;
+}
+
+.login_box form fieldset .login_options {
+  width: 100%;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login_box form fieldset .login_button .icon {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: invert(96%) sepia(100%) saturate(16%) hue-rotate(237deg) brightness(105%) contrast(103%);
+          filter: invert(96%) sepia(100%) saturate(16%) hue-rotate(237deg) brightness(105%) contrast(103%);
+}
+
+.social_media_links a .social_icon {
+  height: 50px;
+  width: 50px;
+  -webkit-filter: invert(19%) sepia(96%) saturate(2987%) hue-rotate(239deg) brightness(81%) contrast(109%);
+          filter: invert(19%) sepia(96%) saturate(2987%) hue-rotate(239deg) brightness(81%) contrast(109%);
+}

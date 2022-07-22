@@ -1,0 +1,119 @@
+@import '../sass_utils/mixins', '../sass_utils/variables';
+
+.login_section .login_box {
+    > * {
+    font-family:$secondary-font;
+    }
+    max-width: 400px;
+    min-width: auto;
+    height: auto;
+    padding: 35px;
+    margin: 50px auto;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include shadow;
+
+    .profile_picture {
+        background-image: url(../images/placeholder_250x250.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-radius: 10%;
+        display: flex;
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    h2 {
+        font-size: xx-large;
+    }
+    p {
+        color: rgb(172, 172, 172);
+        font-size: large;
+        font-weight: 100;
+    }
+
+    form {
+        width: 100%;
+        fieldset {
+            > * {
+                font-size: large;
+            }
+            height: fit-content;
+            margin-top: 20px;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            input {
+                &[name=email], &[name=password] {
+                    width: 100%;
+                    padding: 5px;
+                    margin: 5px 0;
+                    border-width: 0 0 1px 0;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            .login_options {
+                height: auto;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                line-height: 30px;
+                input {
+                    cursor: pointer;
+                }
+                span {
+                    margin-right: 30px;
+                }
+                .forgot_password {
+                    color: $link_blue;
+                    &:active {
+                        color: #000;
+                    }
+                }
+
+            }
+            .login_button {
+                cursor: pointer;
+                user-select: none;
+                width: 100%;
+                height: 50px;
+                background-color: $link_blue;
+                border: none;
+                color: white;
+                font-size: x-large;
+                font-weight: 600;
+                &:active{
+                    background-color: $link_blue_active;
+                }
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .icon {
+                        height: 2em;
+                        @include filter_white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small_screens) {
+    .login_section .login_box {
+        form input {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

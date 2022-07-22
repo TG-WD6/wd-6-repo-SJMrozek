@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Szymon Mrózek">
+    <title>Fundamentals Eindopdracht</title>
+    <link rel="icon" href="images/icons/html_css.png">
+    <link rel="stylesheet" type="text/css" href="dist/style.css">
+</head>
+
+<body class="grid_container">
+    <header class="header">
+        <img class="logo" src="./images/TG_logo.png" alt="Techgrounds">
+        <nav class="menu">
+            <input type="checkbox" class="menu_toggler" unchecked>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="#"><img class="icon" src="./images/icons/home.svg">Home</a></li>
+                <li><a href="#"><img class="icon" src="./images/icons/handshake.svg">Popular</a></li>
+                <li><a href="#"><img class="icon" src="./images/icons/pin.svg">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="spacer"></div>
+
+    <main class="main">
+        <section class="login_section">
+            <div class="login_box">
+                <div class="profile_picture"></div>
+                <h2>Login</h2>
+                <p>Login with Your Email</p>
+                <form method="post">
+                    <fieldset>
+                        <input type="email" name="email" autocomplete="email" placeholder="Email"><br>
+                        <input type="password" name="password" autocomplete="current-password" placeholder="Password"><br>
+                        <div class="login_options">
+                            <span>
+                                <input type="checkbox" name="remember_me">
+                                <label for="remember_me">Remember me</label>
+                            </span>
+                            <a class="forgot_password" href="#">Forgot Password?</a>
+                        </div>
+                        <button class="login_button">
+                            <span><img class="icon" src="./images/icons/drupal.png">LOGIN</span>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <section class="product_gallery">
+            <ul>
+                <hr>
+                <li class="product_item">
+                    <div class="product_image">
+                        <img src="./images/products/mug.png" alt="Product image">
+                    </div>
+                <div class="product_info">
+                    <a href="#" class="brand">Techgrounds</a>
+                    <a href="#" class="product_name">Techgrounds Mok</a>
+                    <p class="description">Neem een pauze van alle foutmeldingen die vanuit je code resulteren en neem een lekker 'bakkie' uit dit essentieel programmeurs item.</p>
+                </div>
+                <div class="purchase_info">
+                    <div class="price">
+                        <span>12<sup>99</sup></span>
+                    </div>
+                    <div class="delivery_info">
+                        <span>voor 23:59 besteld, morgen in huis</span>
+                    </div>
+                    <a class="purchase_button" href="#">
+                        <img class="plus_icon" src="./images/icons/plus.png" height="50%">
+                        <img class="basket_icon" src="./images/icons/shopping-basket.png" height="80%">
+                    </a>
+                </div>
+                </li>
+                <hr>
+                <li class="product_item">
+                    <div class="product_image">
+                        <img src="./images/products/tshirt.png" alt="Product image">
+                    </div>
+                <div class="product_info">
+                    <a href="#" class="brand">Techgrounds</a>
+                    <a href="#" class="product_name">Techgrounds T-shirt</a>
+                    <p class="description">Wil je ook in de zomer flexen met je programmeerskills? Dit T-shirt is daar de ultieme oplossing voor!</p>
+                </div>
+                <div class="purchase_info">
+                    <div class="price">
+                        <span>29<sup>99</sup></span>
+                    </div>
+                    <div class="delivery_info">
+                        <span>voor 23:59 besteld, morgen in huis</span>
+                    </div>
+                    <a class="purchase_button" href="#">
+                        <img class="plus_icon" src="./images/icons/plus.png" height="50%">
+                        <img class="basket_icon" src="./images/icons/shopping-basket.png" height="80%">
+                    </a>
+                </div>
+                </li>
+                <hr>
+                <li class="product_item">
+                    <div class="product_image">
+                        <img src="./images/products/hoodie.png" alt="Product image">
+                    </div>
+                <div class="product_info">
+                    <a href="#" class="brand">Techgrounds</a>
+                    <a href="#" class="product_name">Techgrounds Hoodie (Limited Edition)</a>
+                    <p class="description">Waarschijnlijk het beste wat je in je kledingcollectie kan bezitten. Deze collectionersitem was tot nu toe alleen te verkrijgen door het succesvol afronden van een Techgrounds opleiding.</p>
+                </div>
+                <div class="purchase_info">
+                    <div class="price">
+                        <span>64<sup>99</sup></span>
+                    </div>
+                    <div class="delivery_info">
+                        <span>voor 23:59 besteld, morgen in huis</span>
+                    </div>
+                    <a class="purchase_button" href="#">
+                        <img class="plus_icon" src="./images/icons/plus.png" height="40%">
+                        <img class="basket_icon" src="./images/icons/shopping-basket.png" height="80%">
+                    </a>
+                </div>
+                </li>
+                <hr>
+                <li class="product_item">
+                    <div class="product_image">
+                        <img src="./images/products/plush.png" alt="Product image">
+                    </div>
+                <div class="product_info">
+                    <a href="#" class="brand">Techgrounds</a>
+                    <a href="#" class="product_name">Techgrounds Plush Tijger (Limited Edition)</a>
+                    <p class="description">Jaag de bad-practice spirits weg met deze exclusieve techgrounds plush tijger terwijl je slaapt.</p>
+                </div>
+                <div class="purchase_info">
+                    <div class="price">
+                        <span>9<sup>99</sup></span>
+                    </div>
+                    <div class="delivery_info">
+                        <span>voor 23:59 besteld, morgen in huis</span>
+                    </div>
+                    <a class="purchase_button" href="#">
+                        <img class="plus_icon" src="./images/icons/plus.png" height="40%">
+                        <img class="basket_icon" src="./images/icons/shopping-basket.png" height="80%">
+                    </a>
+                </div>
+                </li>
+                <hr>
+                <li class="product_item">
+                    <div class="product_image">
+                        <img src="./images/products/apron.png" alt="Product image">
+                    </div>
+                <div class="product_info">
+                    <a href="#" class="brand">Techgrounds</a>
+                    <a href="#" class="product_name">Techgrounds Schort</a>
+                    <p class="description">Met deze schort laat je je huisgenoten zien waarom je maaltijden altijd zo perfect zijn. Je ziet recepten als coding challenges, die je met consistentie en mooie styling construeert met veel tests en eventueel debugging tussendoor.</p>
+                </div>
+                <div class="purchase_info">
+                    <div class="price">
+                        <span>14<sup>49</sup></span>
+                    </div>
+                    <div class="delivery_info">
+                        <span>voor 23:59 besteld, morgen in huis</span>
+                    </div>
+                    <a class="purchase_button" href="#">
+                        <img class="plus_icon" src="./images/icons/plus.png" height="40%">
+                        <img class="basket_icon" src="./images/icons/shopping-basket.png" height="80%">
+                    </a>
+                </div>
+                </li>
+                <hr>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="link_box" id="service">
+                <h4>Klantenservice</h4>
+                <ul></ul>
+                <a href="" target="_self">Contact opnemen</a>
+                <a href="" target="_self">Bestellen & leveren</a>
+                <a href="" target="_self">Betalen</a>
+                <a href="" target="_self">Retourneren</a>
+                <a href="" target="_self">Garantie & Reparatie</a>
+            </div>
+            <div class="link_box" id="stores">
+                <h4>Winkels</h4>
+                <a href="" target="_self">Almere</a>
+                <a href="" target="_self">Amstelveen</a>
+                <a href="" target="_self">Amsterdam</a>
+                <a href="" target="_self">Den Haag</a>
+                <a href="" target="_self">Eindhoven</a>
+                <a href="" target="_self">Groningen</a>
+                <a href="" target="_self">Maastricht</a>
+                <a href="" target="_self">Rotterdam</a>
+                <a href="" target="_self">Utrecht</a>
+            </div>
+
+            <div class="link_box" id="explore">
+                <h4>Ontdek</h4>
+                <a href="" target="_self">Inspiratie</a>
+                <a href="" target="_self">Merken</a>
+                <a href="" target="_self">Outlet</a>
+                <a href="" target="_self">Acties</a>
+                <br>
+                <a href="" target="_self">Damesmode</a>
+                <a href="" target="_self">Herenmode</a>
+                <a href="" target="_self"></a>
+                <a href="" target="_self"></a>
+                <a href="" target="_self"></a>
+            </div>
+
+            <div class="link_box" id="social">
+                <h4>Wil je ons volgen?</h4>
+                <div class="social_links">
+                    <a href="https://www.facebook.com/Techgrounds/" target="_blank" title="Facebook">
+                        <img class="social_icon" src="./images/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/techgrounds_nl/" target="_blank" title="Instagram">
+                        <img class="social_icon" src="./images/icons/instagram.png" alt="Instagram"></a>
+                    <a href="https://nl.linkedin.com/company/techgrounds" target="_blank" title="LinkedIn">
+                        <img class="social_icon" src="./images/icons/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="https://twitter.com/TechGrounds_NL/" target="_blank" title="Twitter">
+                        <img class="social_icon" src="./images/icons/twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
